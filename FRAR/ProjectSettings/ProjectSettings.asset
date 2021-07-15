@@ -128,7 +128,9 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 5191604432511046484, guid: 811ec7a3832c1eb4aa7ab54b53c007e0, type: 2}
+  - {fileID: 5409925280857037485, guid: 8a816c03f3181e243bc768a389b68633, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -594,11 +596,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: MRTKExamples
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\immer\Repos\FRAR\FRAR\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: RTI
+  metroCertificateIssuer: RTI
+  metroCertificateNotAfter: 80b6ced91c93d801
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: FRAR

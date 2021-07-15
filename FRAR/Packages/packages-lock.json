@@ -6,6 +6,24 @@
       "source": "local-tarball",
       "dependencies": {}
     },
+    "com.microsoft.azure.spatial-anchors-sdk.core": {
+      "version": "file:C:/Users/immer/Downloads/com.microsoft.azure.spatial-anchors-sdk.core-2.10.0-preview.1.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.unity.subsystemregistration": "1.0.6",
+        "com.unity.xr.arsubsystems": "4.0.8",
+        "com.unity.xr.arfoundation": "4.0.12"
+      }
+    },
+    "com.microsoft.azure.spatial-anchors-sdk.windows": {
+      "version": "file:C:/Users/immer/Downloads/com.microsoft.azure.spatial-anchors-sdk.windows-2.9.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.microsoft.azure.spatial-anchors-sdk.core": "2.9.0"
+      }
+    },
     "com.microsoft.mixedreality.openxr": {
       "version": "file:MixedReality/com.microsoft.mixedreality.openxr-0.9.3.tgz",
       "depth": 0,

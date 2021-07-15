@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "com.microsoft.azure.object-anchors.runtime": "file:C:/Users/immer/Downloads/com.microsoft.azure.object-anchors.runtime-0.11.0(1).tgz",
+    "com.microsoft.azure.spatial-anchors-sdk.core": "file:C:/Users/immer/Downloads/com.microsoft.azure.spatial-anchors-sdk.core-2.10.0-preview.1.tgz",
+    "com.microsoft.azure.spatial-anchors-sdk.windows": "file:C:/Users/immer/Downloads/com.microsoft.azure.spatial-anchors-sdk.windows-2.9.0.tgz",
     "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-0.9.3.tgz",
     "com.microsoft.mixedreality.toolkit.examples": "file:MixedReality/com.microsoft.mixedreality.toolkit.examples-2.7.1.tgz",
     "com.microsoft.mixedreality.toolkit.extensions": "file:MixedReality/com.microsoft.mixedreality.toolkit.extensions-2.7.1.tgz",
