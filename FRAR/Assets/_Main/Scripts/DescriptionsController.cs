@@ -22,16 +22,30 @@ namespace FRAR.UI
 
         public void UpdateText()
         {
-            titleTextObj.text = titleText;
-            descriptionTextObj.text = descriptionText;
-            titleTextObj.GetComponentInParent<SolverHandler>().TransformOverride = this.transform;
+            if (titleTextObj && descriptionTextObj != null)
+            {
+                titleTextObj.text = titleText;
+                descriptionTextObj.text = descriptionText;
+
+                if (titleTextObj.GetComponentInParent<SolverHandler>() != null)
+                    titleTextObj.GetComponentInParent<SolverHandler>().TransformOverride = this.transform;
+                else
+                    return;
+            }
         }
 
         public void ResetText()
         {
-            titleTextObj.text = "";
-            descriptionTextObj.text = "";
-            titleTextObj.GetComponentInParent<SolverHandler>().TransformOverride = resetTransform;
+            if (titleTextObj && descriptionTextObj != null)
+            {
+                titleTextObj.text = "";
+                descriptionTextObj.text = "";
+
+                if (titleTextObj.GetComponentInParent<SolverHandler>() != null)
+                    titleTextObj.GetComponentInParent<SolverHandler>().TransformOverride = resetTransform;
+                else
+                    return;
+            }
         }
 
         public void OnFocusEnter(FocusEventData eventData)
