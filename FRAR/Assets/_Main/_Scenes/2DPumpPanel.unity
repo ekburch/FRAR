@@ -1087,6 +1087,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpPanelParent
       objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025188, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: remainType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025188, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: vanishDelay
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
 --- !u!1 &1231033224
