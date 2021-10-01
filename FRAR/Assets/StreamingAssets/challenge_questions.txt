@@ -1,0 +1,55 @@
+Master pump intake pressure gauge 
+
+This is connected to the intake side of the pump and measures both a positive pressure and a vacuum. It must be capable of reading 30 inches Hg (100 kPa) vacuum to at least a gauge pressure of 300 psi (2100 kPa). The gauge must be labeled as "Pump Intake." 
+
+Master pump discharge gauge  
+
+This measures the pressure as it leaves the pump and is connected to the discharge side of the pump. It must be capable of reading from 0 to 300 psi (0 to 2100kPa). This must be labeled as "Pump Discharge" and located within 8 inches of the master pump intake gauge and must be at least one inch larger than all of the other discharge gauges. 
+
+Pumping engine tachometer 
+
+This instrument is used for measuring rotational speed, defined as revolutions per minute (rpm) of the engine.
+
+Pumping engine coolant temperature gauge 
+
+This allows the operator to monitor the temperature of the coolant inside of the engine of the apparatus. Too high, and it can cause severe damage to the engine and possibly cause it to shut down. Too low, and the engine may not operate as efficiently. 
+
+Pumping engine oil pressure gauge 
+
+This indicates whether an adequate supply of oil is being distributed to the various areas of the engine. 
+
+Voltmeter 
+
+This measures the voltage across the battery terminals and gives an indication of the electrical condition of the battery. 
+
+Pump pressure controls 
+
+This is used to control the discharge pressures, thereby protecting fire fighters who are operating hose streams as well as preventing damage to the discharge hose.  
+
+Pump engine throttle 
+
+This is used to increase or decrease the engine speed from the pump panel.  
+
+Primer control 
+
+This is used to expel any air that may be trapped inside the pump and during the drafting operations.  
+
+Water tank-to-pump valve control 
+
+The pipe that leads from the apparatus water tank (e.g., a fire hydrant) to the fire pump. This contains a check valve, which allows water to flow only from the tank to the pump, and not back inside the tank. 
+
+Water tank fill valve control 
+
+This allows the pump operator to control the flow of water to the tank.  
+
+Fuel level indicator 
+
+An instrument used to indicate the amount of fuel in a fuel tank. A warning light indicating when the fuel level falls below one-quarter must be provided on the pump panel.  
+
+Pump overheat indicator 
+
+This the gauge that indicates whether the pump is overheating.  
+
+Water Intake 
+
+Where external water is fed into the truck. 

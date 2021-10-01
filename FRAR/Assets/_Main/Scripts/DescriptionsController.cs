@@ -1,34 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Microsoft.MixedReality.Toolkit.UI;
-using Microsoft.MixedReality.Toolkit.Input;
 using Microsoft.MixedReality.Toolkit.Utilities.Solvers;
 
-namespace FRAR.UI
+namespace FRAR
 {
-    public class DescriptionsController : MonoBehaviour, IMixedRealityFocusHandler
+    public class DescriptionsController : MonoBehaviour
     {
         [SerializeField]
-        private TextMeshPro titleTextObj = default;
+        private TextMeshPro m_titleText = default;
         [SerializeField]
-        private TextMeshPro descriptionTextObj = default;
+        private TextMeshPro m_descriptionText = default;
         [SerializeField]
         private Transform resetTransform = default;
 
-        public string titleText = "Name this object";
-        public string descriptionText = "New description for this object";
-
-        public void UpdateText()
+        public void UpdateText(string newTitle, string newDescription, Transform transform)
         {
-            if (titleTextObj && descriptionTextObj != null)
+            if (m_titleText && m_descriptionText != null)
             {
-                titleTextObj.text = titleText;
-                descriptionTextObj.text = descriptionText;
+                m_titleText.text = newTitle;
+                m_descriptionText.text = newDescription;
 
-                if (titleTextObj.GetComponentInParent<SolverHandler>() != null)
-                    titleTextObj.GetComponentInParent<SolverHandler>().TransformOverride = this.transform;
+                if (GetComponent<SolverHandler>() != null)
+                    GetComponent<SolverHandler>().TransformOverride = transform.transform;
                 else
                     return;
             }
@@ -36,26 +29,16 @@ namespace FRAR.UI
 
         public void ResetText()
         {
-            if (titleTextObj && descriptionTextObj != null)
+            if (m_titleText && m_descriptionText != null)
             {
-                titleTextObj.text = "";
-                descriptionTextObj.text = "";
+                m_titleText.text = "";
+                m_descriptionText.text = "";
 
-                if (titleTextObj.GetComponentInParent<SolverHandler>() != null)
-                    titleTextObj.GetComponentInParent<SolverHandler>().TransformOverride = resetTransform;
+                if (GetComponent<SolverHandler>() != null)
+                    GetComponent<SolverHandler>().TransformOverride = resetTransform;
                 else
                     return;
             }
-        }
-
-        public void OnFocusEnter(FocusEventData eventData)
-        {
-            UpdateText();
-        }
-
-        public void OnFocusExit(FocusEventData eventData)
-        {
-            ResetText();
         }
     }
 }

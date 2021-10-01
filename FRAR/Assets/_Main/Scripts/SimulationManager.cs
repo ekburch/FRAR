@@ -16,8 +16,7 @@ namespace FRAR
         private void OnPanelEventsTriggered(InputEvents inputEvent)
         {
             panelComponents[inputEvent.InputName] = inputEvent.InputValue;
-            //panelComponents.Add(inputEvent.InputName, inputEvent.InputValue);
-            
+
             foreach(KeyValuePair<string, int> entry in panelComponents)
             {
                 Debug.Log(entry.Key + ", " + entry.Value);
