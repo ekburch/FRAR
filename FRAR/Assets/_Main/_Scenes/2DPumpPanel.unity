@@ -496,110 +496,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   eyeCursorSnapToTargetCenter: 0
---- !u!1 &106081050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 106081051}
-  - component: {fileID: 106081054}
-  - component: {fileID: 106081053}
-  - component: {fileID: 106081052}
-  m_Layer: 0
-  m_Name: Valve (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &106081051
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106081050}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0218, y: -0, z: -0.183}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 893798930}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &106081052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106081050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5effe9d126b5409479f0a7f6a513a05a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayPanel: {fileID: 47787756}
-  _inputName: Pumping Engine Tachometer
-  _inputDescription: The tachometer is an instrument used for measuring rotational
-    speed, defined as revolutions per minute (rpm) of the engine. The pump operator
-    may reference the tachometer when troubleshooting any issue with the pump. If
-    the psi does not match the rpm of the engine, the operator may recognize a problem
-    with the pump and have to stop its operation.
-  _inputValue: 0
---- !u!114 &106081053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106081050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 193c362eb02741c43b31788b51c83d73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusEnabled: 1
-  prefab: {fileID: 1083549605185280, guid: afaef0108a478c44a9eac26658bc29bf, type: 3}
-  tooltipToggleAction:
-    id: 0
-    description: None
-    axisConstraint: 0
-  appearType: 0
-  vanishType: 0
-  remainType: 0
-  appearDelay: 0
-  vanishDelay: 2
-  lifetime: 1
-  keepWorldRotation: 1
-  settingsMode: 1
-  showBackground: 1
-  showOutline: 0
-  showConnector: 1
-  followType: 1
-  pivotMode: 0
-  pivotDirection: 1
-  pivotDirectionOrient: 0
-  manualPivotDirection: {x: 0, y: 1, z: 0}
-  manualPivotLocalPosition: {x: 0, y: 1, z: -0.5}
-  pivotDistance: 0.25
-  toolTipText: Pumping Engine Tachometer
-  anchor: {fileID: 106081051}
---- !u!65 &106081054
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106081050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.07610759, y: 7.007688, z: 0.18253867}
-  m_Center: {x: -0.043135714, y: 3.0038435, z: -0.2157333}
 --- !u!114 &145314629 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2897044415607412869, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
@@ -611,30 +507,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &149017035 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7756329934910998909, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+--- !u!114 &149017036 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 149017036, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
   m_PrefabInstance: {fileID: 893798929}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &149017036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149017035}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b487e473f382349409d4a899e47aff26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelComponents:
-  - {fileID: 2093044659}
-  - {fileID: 636353232}
-  - {fileID: 1640006300}
-  - {fileID: 453051706}
-  - {fileID: 1256120823}
-  descriptionPanel: {fileID: 47787756}
 --- !u!1 &160177850
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,29 +740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &453051706 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7756329935941360428, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
-  m_PrefabInstance: {fileID: 893798929}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &453051707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453051706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5effe9d126b5409479f0a7f6a513a05a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayPanel: {fileID: 47787756}
-  _inputName: Tank-to-pump
-  _inputDescription: The pipe that leads from the apparatus water tank (e.g., a fire
-    hydrant) to the fire pump. This contains a check valve, which allows water to
-    flow only from the tank to the pump, and not back inside the tank.
-  _inputValue: 0
 --- !u!1 &472908969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,30 +864,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &636353232 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7756329936026325394, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
-  m_PrefabInstance: {fileID: 893798929}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &636353233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636353232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5effe9d126b5409479f0a7f6a513a05a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayPanel: {fileID: 47787756}
-  _inputName: Master Pump Intake Pressure Gauge
-  _inputDescription: This is connected to the intake side of the pump and measures
-    both a positive pressure and a vacuum. It must be capable of reading 30 inches
-    Hg (100 kPa) vacuum to at least a gauge pressure of 300 psi (2100 kPa). The gauge
-    must be labled as "Pump Intake"
-  _inputValue: 0
 --- !u!1001 &697924417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1162,6 +998,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 106081052, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: displayPanel
+      value: 
+      objectReference: {fileID: 47787756}
+    - target: {fileID: 149017036, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: descriptionPanel
+      value: 
+      objectReference: {fileID: 47787756}
+    - target: {fileID: 453051707, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: displayPanel
+      value: 
+      objectReference: {fileID: 47787756}
+    - target: {fileID: 636353233, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: displayPanel
+      value: 
+      objectReference: {fileID: 47787756}
+    - target: {fileID: 1256120824, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: displayPanel
+      value: 
+      objectReference: {fileID: 47787756}
+    - target: {fileID: 1640006301, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: displayPanel
+      value: 
+      objectReference: {fileID: 47787756}
+    - target: {fileID: 2093044660, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: displayPanel
+      value: 
+      objectReference: {fileID: 47787756}
+    - target: {fileID: 583710808696758549, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: displayPanel
+      value: 
+      objectReference: {fileID: 47787756}
+    - target: {fileID: 2296950661208738668, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: displayPanel
+      value: 
+      objectReference: {fileID: 47787756}
+    - target: {fileID: 3872268255605887378, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: displayPanel
+      value: 
+      objectReference: {fileID: 47787756}
     - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1210,21 +1086,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpPanelParent
       objectReference: {fileID: 0}
-    - target: {fileID: 7756329935046025188, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
-      propertyPath: remainType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7756329935046025188, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
-      propertyPath: vanishDelay
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 8008017616031462240, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: displayPanel
+      value: 
+      objectReference: {fileID: 47787756}
+    - target: {fileID: 8311637109708283498, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: descriptionPanel
+      value: 
+      objectReference: {fileID: 47787756}
+    - target: {fileID: 9201800038196594511, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: displayPanel
+      value: 
+      objectReference: {fileID: 47787756}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
---- !u!4 &893798930 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7756329934910998898, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
-  m_PrefabInstance: {fileID: 893798929}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1219219643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,27 +1174,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1256120823 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7756329935426307299, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
-  m_PrefabInstance: {fileID: 893798929}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1256120824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256120823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5effe9d126b5409479f0a7f6a513a05a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayPanel: {fileID: 47787756}
-  _inputName: Water Intake
-  _inputDescription: Where external water is fed into the truck
-  _inputValue: 0
 --- !u!1 &1326725378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6293782215702940639, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
@@ -1655,31 +1509,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1640006300 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7756329935301491070, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
-  m_PrefabInstance: {fileID: 893798929}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1640006301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640006300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5effe9d126b5409479f0a7f6a513a05a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayPanel: {fileID: 47787756}
-  _inputName: Master Pump Discharge Gauge
-  _inputDescription: This measures the pressure as it leaves the pump and is connected
-    to the discharge side of the pump. It must be capable of reading from 0 to 300
-    psi (0 to 2100kPa). This must be labled as "Pump Discharge" and located within
-    8 inches of the master pump intake gauge and must be at least one inch larger
-    than all of the other discharge gauges.
-  _inputValue: 0
 --- !u!1 &1750391256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,24 +1637,3 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2256845151406054023, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
---- !u!1 &2093044659 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7756329935951040861, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
-  m_PrefabInstance: {fileID: 893798929}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2093044660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093044659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5effe9d126b5409479f0a7f6a513a05a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayPanel: {fileID: 47787756}
-  _inputName: Pink Relief Valve
-  _inputDescription: I'm too grainy to determine what I am!
-  _inputValue: 1
