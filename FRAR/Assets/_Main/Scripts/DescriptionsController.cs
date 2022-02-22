@@ -1,43 +1,109 @@
 using UnityEngine;
 using TMPro;
 using Microsoft.MixedReality.Toolkit.Utilities.Solvers;
+using Microsoft.MixedReality.Toolkit.UI;
+using System.Collections;
+using System.Runtime.CompilerServices;
 
 namespace FRAR
 {
     public class DescriptionsController : MonoBehaviour
     {
         [SerializeField]
+        private GameObject descriptionPanelPrefab;
+
+        /// <summary>
+        /// Large Dialog example prefab to display
+        /// </summary>
+        public GameObject DescriptionPanelPrefab
+        {
+            get => descriptionPanelPrefab;
+            set => descriptionPanelPrefab = value;
+        }
+
         private TextMeshPro m_titleText = default;
-        [SerializeField]
         private TextMeshPro m_descriptionText = default;
-        [SerializeField]
         private Transform resetTransform = default;
 
-        public void UpdateText(string newTitle, string newDescription, Transform transform)
-        {
-            if (m_titleText && m_descriptionText != null)
-            {
-                m_titleText.text = newTitle;
-                m_descriptionText.text = newDescription;
+        private bool _showDiscriptions;
 
-                if (GetComponent<SolverHandler>() != null)
-                    GetComponent<SolverHandler>().TransformOverride = transform.transform;
+        public bool ShowDescriptions 
+        { 
+            get => _showDiscriptions; 
+            set => _showDiscriptions = value; 
+        }
+
+        private void Start()
+        {
+            _showDiscriptions = true;
+        }
+
+        public void UpdateText(string newTitle, string newDescription, Transform transform, bool isActiveAndEnabled)
+        {
+            //descriptionPanelPrefab = ObjectPool.SharedInstance.GetPooledObject();
+            if (descriptionPanelPrefab != null)
+            {
+                if (_showDiscriptions)
+                {
+                    m_titleText = descriptionPanelPrefab.GetComponent<DialogShell>().TitleText;
+                    m_descriptionText = descriptionPanelPrefab.GetComponent<DialogShell>().DescriptionText;
+                    m_titleText.text = newTitle;
+                    m_descriptionText.text = newDescription;
+
+                    if (isActiveAndEnabled)
+                    {
+                        descriptionPanelPrefab.SetActive(true);
+                    }
+                    else
+                    {
+                        descriptionPanelPrefab.SetActive(false);
+                    }
+                }
                 else
+                {
                     return;
+                }
             }
+
+                //if (GetComponent<SolverHandler>() == null)
+                //    return;
+                //else
+                //{
+                //    GetComponent<SolverHandler>().TransformOverride = transform.transform;
+                //}
+            
         }
 
         public void ResetText()
         {
-            if (m_titleText && m_descriptionText != null)
+            if (descriptionPanelPrefab != null)
             {
-                m_titleText.text = "";
-                m_descriptionText.text = "";
+               //foreach(GameObject go in ObjectPool.SharedInstance.pooledObjects)
+               //{
+               //    if (go.activeInHierarchy)
+               //    {
+               //        descriptionPanelPrefab = go;
+               //        m_titleText.text = "";
+               //        m_descriptionText.text = "";
+               //        m_titleText = null;
+               //        m_descriptionText = null;
+               //        go.SetActive(false);
+               //        //dialogInstance.SetActive(false);
+               //    }
+               //}
+            }
 
-                if (GetComponent<SolverHandler>() != null)
-                    GetComponent<SolverHandler>().TransformOverride = resetTransform;
-                else
-                    return;
+                //if (GetComponent<SolverHandler>() != null)
+                //    GetComponent<SolverHandler>().TransformOverride = resetTransform;
+                //else
+                //    return;
+        }
+
+        private void OnClosedDialogEvent(DialogResult obj)
+        {
+            if (obj.Result == DialogButtonType.Yes)
+            {
+                Debug.Log(obj.Result);
             }
         }
     }

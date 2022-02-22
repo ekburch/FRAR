@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Microsoft.MixedReality.Toolkit.UI;
 
-namespace FRAR.UI
+namespace FRAR
 {
     public class HintsController : MonoBehaviour
     {
@@ -23,6 +23,8 @@ namespace FRAR.UI
             if (toggleEvent == null)
                 toggleEvent = new UnityEvent();
             toggleEvent.AddListener(LabelToggle);
+            //descriptionPanel = ObjectPool.SharedInstance.GetPooledObject();
+            Toggle();
         }
 
         public void LabelToggle()
@@ -50,7 +52,10 @@ namespace FRAR.UI
             if (isLabelsEnabled)
                 OnToggleHints?.Invoke();
             else
+            {
+                //descriptionPanel.GetComponent<DescriptionsController>().ShowDescriptions = !descriptionPanel.GetComponent<DescriptionsController>().ShowDescriptions;
                 descriptionPanel.SetActive(!descriptionPanel.activeSelf);
+            }
         }
 
         public event HintsControllerDelegate OnToggleHints;

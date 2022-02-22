@@ -10,7 +10,8 @@ namespace FRAR
     {
         public static event Action<InputEvents> OnInputEventTriggered;
 
-        public GameObject displayPanel;
+        public DescriptionsController descriptionsController;
+        public HintsController hintsController;
 
         [SerializeField]
         private string _inputName;
@@ -18,20 +19,27 @@ namespace FRAR
         private string _inputDescription;
         [SerializeField]
         private int _inputValue;
+        [SerializeField]
+        private float _timeUntilDialogResets = 2f;
 
         public string InputName => _inputName;
         public string InputDescription => _inputDescription;
         public int InputValue => _inputValue;
+        public float TimeUntilDialogResets => _timeUntilDialogResets;
 
         public void OnFocusEnter(FocusEventData eventData)
         {
             OnInputEventTriggered?.Invoke(this);
-            displayPanel.GetComponent<DescriptionsController>().UpdateText(InputName, InputDescription, transform);
+            descriptionsController.UpdateText(InputName, InputDescription, transform, true);
+            //hintsController.DescriptionToggle();
         }
 
         public void OnFocusExit(FocusEventData eventData)
         {
-            if (displayPanel != null) displayPanel.GetComponent<DescriptionsController>().ResetText();
+            //StartCoroutine(descriptionsController.ResetText(TimeUntilDialogResets));
+            descriptionsController.UpdateText("", "", null, false);
+            //hintsController.DescriptionToggle();
+            Debug.Log("OnFocusExit()");
         }
     }
 }
