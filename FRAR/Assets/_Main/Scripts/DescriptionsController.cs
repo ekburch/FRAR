@@ -21,6 +21,9 @@ namespace FRAR
             set => descriptionPanelPrefab = value;
         }
 
+        [SerializeField]
+        private Renderer contentBackPanelRenderer = default;
+
         private TextMeshPro m_titleText = default;
         private TextMeshPro m_descriptionText = default;
         private Transform resetTransform = default;
@@ -50,14 +53,7 @@ namespace FRAR
                     m_titleText.text = newTitle;
                     m_descriptionText.text = newDescription;
 
-                    if (isActiveAndEnabled)
-                    {
-                        descriptionPanelPrefab.SetActive(true);
-                    }
-                    else
-                    {
-                        descriptionPanelPrefab.SetActive(false);
-                    }
+                    contentBackPanelRenderer.enabled = isActiveAndEnabled;
                 }
                 else
                 {
