@@ -9,6 +9,7 @@ namespace FRAR
     public class InputEvents : MonoBehaviour, IMixedRealityFocusHandler
     {
         public static event Action<InputEvents> OnInputEventTriggered;
+        public Action<FocusEventData> OnFocusEntered;
 
         public DescriptionsController descriptionsController;
         public HintsController hintsController;
@@ -30,14 +31,15 @@ namespace FRAR
         public void OnFocusEnter(FocusEventData eventData)
         {
             OnInputEventTriggered?.Invoke(this);
-            descriptionsController.UpdateText(InputName, InputDescription, transform, true);
+            descriptionsController?.UpdateText(InputName, InputDescription, transform, true);
+            OnFocusEntered?.Invoke(eventData);
             //hintsController.DescriptionToggle();
         }
 
         public void OnFocusExit(FocusEventData eventData)
         {
             //StartCoroutine(descriptionsController.ResetText(TimeUntilDialogResets));
-            descriptionsController.UpdateText("", "", null, false);
+            descriptionsController?.UpdateText("", "", null, false);
             //hintsController.DescriptionToggle();
             Debug.Log("OnFocusExit()");
         }

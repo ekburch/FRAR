@@ -9,9 +9,11 @@ namespace FRAR
 {
     public class QuestionLoader : MonoBehaviour
     {
-        private ChallengeQuestion[] challengeQuestions;
-        private static List<ChallengeQuestion> unansweredChallenges;
-        private static string[] questionsText;
+        [SerializeField]
+        private ChallengeQuestionObject[] challengeQuestions;
+        //private static string[] questionsText;
+
+        //private Dictionary<GameObject, string> componentsDictionary = new Dictionary<GameObject, string>();
 
         private void Awake()
         {
@@ -20,22 +22,26 @@ namespace FRAR
 
         private void LoadAllQuestions()
         {
-            string path = Application.streamingAssetsPath + "/challenge_questions.txt";
-            using (StreamReader reader = new StreamReader(path))
+            foreach(ChallengeQuestionObject challengeQuestion in challengeQuestions)
             {
-                string _questionsText = reader.ReadToEnd();
-                questionsText = _questionsText.Split('\n');
+                challengeQuestion.Asked = false;
             }
-
-            char[] c = new char[questionsText.Length];
-            for(int i = 0; i < questionsText.Length; i++)
-            {
-                c = questionsText[i].ToArray();
-                c.CopyTo(challengeQuestions, i);
-            }
+            //string path = Application.streamingAssetsPath + "/challenge_questions.txt";
+            //using (StreamReader reader = new StreamReader(path))
+            //{
+            //    string _questionsText = reader.ReadToEnd();
+            //    questionsText = _questionsText.Split('\n');
+            //}
+            //
+            //char[] c = new char[questionsText.Length];
+            //for(int i = 0; i < questionsText.Length; i++)
+            //{
+            //    c = questionsText[i].ToArray();
+            //    c.CopyTo(challengeQuestions, i);
+            //}
         }
 
-        public ChallengeQuestion GetUnaskedChallenge()
+        public ChallengeQuestionObject GetUnaskedChallenge()
         {
             CheckToResetQuestions();
 
