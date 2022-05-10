@@ -83,6 +83,13 @@
         "com.microsoft.mixedreality.toolkit.foundation": "2.7.2"
       }
     },
+    "com.rufus31415.simplewebxr": {
+      "version": "https://github.com/Rufus31415/Simple-WebXR-Unity.git?path=/com.rufus31415.simplewebxr/",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "a9060413037d6b5dd985abba29ed17fcd51ff79d"
+    },
     "com.unity.collab-proxy": {
       "version": "1.15.7",
       "depth": 0,

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfChallengeQuestion xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ChallengeQuestion>
+    <Question>This is connected to the intake side of the pump and measures both a positive pressure and a vacuum. It must be capable of reading 30 inches Hg (100 kPa) vacuum to at least a gauge pressure of 300 psi (2100 kPa).</Question>
+    <Answers>
+      <string>Pump Pressure Controls</string>
+      <string>Pump Engine Throttle</string>
+      <string>Master Pump Pressure Intake Gauge</string>
+    </Answers>
+    <CorrectAnswer>2</CorrectAnswer>
+    <Asked>false</Asked>
+  </ChallengeQuestion>
+</ArrayOfChallengeQuestion>

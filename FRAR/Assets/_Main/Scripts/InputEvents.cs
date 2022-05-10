@@ -41,7 +41,6 @@ namespace FRAR
             //StartCoroutine(descriptionsController.ResetText(TimeUntilDialogResets));
             descriptionsController?.UpdateText("", "", null, false);
             //hintsController.DescriptionToggle();
-            Debug.Log("OnFocusExit()");
         }
     }
 }

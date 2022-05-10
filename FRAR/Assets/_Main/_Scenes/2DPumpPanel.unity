@@ -1131,6 +1131,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 4.4703483e-10
       objectReference: {fileID: 0}
+    - target: {fileID: 1080496520115945988, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1862698018291853591, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
       propertyPath: _inputName
       value: Tachometer
@@ -1219,6 +1223,10 @@ PrefabInstance:
       propertyPath: descriptionsController
       value: 
       objectReference: {fileID: 1219219646}
+    - target: {fileID: 6320011193396954037, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6372371114438529651, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
       propertyPath: displayPanel
       value: 

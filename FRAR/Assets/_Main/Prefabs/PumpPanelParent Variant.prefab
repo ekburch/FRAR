@@ -1,0 +1,671 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3312530299007959626
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4489431338605468023, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: _inputName
+      value: Master pump discharge gauge
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489431338605468023, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: _inputDescription
+      value: This measures the pressure as it leaves the pump and is connected to
+        the discharge side of the pump. It must be capable of reading from 0 to 300
+        psi (0 to 2100kPa). This must be labeled as "Pump Discharge" and located
+        within 8 inches of the master pump intake gauge and must be at least one
+        inch larger than all of the other discharge gauges.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025184, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756329935046025187, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_Name
+      value: PumpPanelParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8311637109708283498, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1071892308, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 1083675160114206401, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 10407343, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 2456864123821117091, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 6402489270773091953, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 7025929124960889475, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 5782026580742872979, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 7042899387157180491, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 2886550581321554532, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 6359724401467462480, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 6121440118492649952, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 1474796514528968407, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 7935148971813446137, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 524458037333044655, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 9160864091740185687, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 7678345177757572325, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 106081053, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 7756329935426307297, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 7756329935941360418, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 7756329935301491068, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 7756329936026325392, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 7756329935951040851, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 5894082099170449117, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 8159340454810489847, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 1862698018291853591, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+--- !u!1 &2886540465924624367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 429941495897574821, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3458945662442929730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2159717919643106312, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3312530299015417831 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 10407341, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458945662442929730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5effe9d126b5409479f0a7f6a513a05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6901202157088184599 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8231883086920424285, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &614222424226638742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2701685662583433692, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6443956747465191661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8400884857272693415, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7742974205611078830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5083696214216767204, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8663267125698092316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6179610819485720406, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3913116911958212845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1996880073931702951, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5517445222526338783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7019317363888440469, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1420273003488566077 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4489431338605468023, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443956747465191661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5effe9d126b5409479f0a7f6a513a05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6478194963876863510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8367498160637762652, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1434479736345586964 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4472131028894969694, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2807144038678531052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 796154587242072486, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5724041911492232042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7104315210426990880, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8983485571145879220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5860230152753630462, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5942528587555193513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9187451551877316835, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4817243386395668778 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8008017616031462240, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942528587555193513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5effe9d126b5409479f0a7f6a513a05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1469676671091897607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4151527091814987597, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+  m_PrefabInstance: {fileID: 3312530299007959626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &527950975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886540465924624367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: Where external water is fed into the truck
+--- !u!114 &527950976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886540465924624367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901202157088184599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: This displays the water level inside the water tank, usually in one-quarter
+    increments.
+--- !u!114 &527950974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901202157088184599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7742974205611078830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: This controls the discharge pressure by passing water from the discharge
+    side of the pump back into the intake side of the pump.
+--- !u!114 &527950972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7742974205611078830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5517445222526338783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: 'This allows the operator to monitor the temperature of the coolant inside
+    of the engine of the apparatus. Too high, and it can cause severe damage to the
+    engine and possibly cause it to shut down. Too low, and the engine may not operate
+    as efficiently. '
+--- !u!114 &527950970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5517445222526338783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434479736345586964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: This is where the pump operator can increase or decrease the engine speed
+    from the pump panel.
+--- !u!114 &527950968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434479736345586964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983485571145879220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: 'This allows the pump operator to control the flow of water to the tank. '
+--- !u!114 &527950966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983485571145879220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469676671091897607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: The pipe that leads from the apparatus water tank (e.g., a fire hydrant)
+    to the fire pump. This contains a check valve, which allows water to flow only
+    from the tank to the pump, and not back inside the tank.
+--- !u!114 &527950964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469676671091897607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614222424226638742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: This is used to expel any air that may be trapped inside the pump and
+    during the drafting operations.
+--- !u!114 &527950962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614222424226638742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3913116911958212845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: This is an instrument that indicates the amount of fuel in the fuel tank.
+--- !u!114 &527950960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3913116911958212845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478194963876863510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: This indicates whether an adequate supply of oil is being distributed
+    to various areas of the engine.
+--- !u!114 &527950958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478194963876863510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807144038678531052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: This measures the voltage across the battery terminals and gives an indication
+    of the battery's condition.
+--- !u!114 &527950956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807144038678531052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724041911492232042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: This gauge indicates whether the pump is overheating
+--- !u!114 &527950954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724041911492232042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942528587555193513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: The tachometer is an instrument used for measuring rotational speed,
+    defined as revolutions per minute (rpm) of the engine. The pump operator may
+    reference the tachometer when troubleshooting any issue with the pump. If the
+    psi does not match the rpm of the engine, the operator may recognize a problem
+    with the pump and have to stop its operation.
+--- !u!114 &527950952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942528587555193513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 4817243386395668778}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458945662442929730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: This is connected to the intake side of the pump and measures both a
+    positive pressure and a vacuum. It must be capable of reading 30 inches Hg (100
+    kPa) vacuum to at least a gauge pressure of 300 psi (2100 kPa). The gauge must
+    be labled as "Pump Intake"
+--- !u!114 &527950950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458945662442929730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 3312530299015417831}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443956747465191661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: This measures the pressure as it leaves the pump and is connected to
+    the discharge side of the pump. It must be capable of reading from 0 to 300 psi
+    (0 to 2100kPa). This must be labeled as "Pump Discharge" and located within 8
+    inches of the master pump intake gauge and must be at least one inch larger than
+    all of the other discharge gauges.
+--- !u!114 &527950948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443956747465191661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 1420273003488566077}
+  m_challengeManager: {fileID: 0}
+--- !u!114 &527950945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8663267125698092316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390f125212e70374bb33b4c3c422ae77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: This measures the pressure as it leaves the pump and is connected to
+    the discharge side of the pump. It must be capable of reading from 0 to 300 psi
+    (0 to 2100kPa). This must be labled as "Pump Discharge" and located within 8
+    inches of the master pump intake gauge and must be at least one inch larger than
+    all of the other discharge gauges.
+--- !u!114 &527950946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8663267125698092316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541a34d6bc9e78498cd07ba46dd9bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inputEvents: {fileID: 0}
+  m_challengeManager: {fileID: 0}
