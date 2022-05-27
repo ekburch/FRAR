@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
+  m_Name: Tachometer_2
+  m_EditorClassIdentifier: 
+  question: The pump operator may use this instrument when troubleshooting any issue
+    with the pump. If the psi does not match the rpm of the engine, the operator
+    may recognize a problem with the pump and stop it altogether.
+  answers:
+  - Tachometer
+  - Relief Control Valve
+  - Tank to Pump
+  - Oil Pressure Gauge
+  correctAnswer: 0

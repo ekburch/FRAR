@@ -26,19 +26,19 @@ public class ChallengeQuestion_ScriptableObject : ScriptableObject
         //RenameToMatchQuestionAndAnswer();
     }
 
-    private void RenameToMatchQuestionAndAnswer()
-    {
-        string desiredName = string.Format("{0} [{1}]",
-            question.Replace("?", ""),
-            answers[correctAnswer]);
-
-        string assetPath = AssetDatabase.GetAssetPath(this.GetInstanceID());
-        string shouldEndWith = "/" + desiredName + ".asset";
-        if (assetPath.EndsWith(shouldEndWith) == false)
-        {
-            Debug.Log("Want to rename to " + desiredName);
-            AssetDatabase.RenameAsset(assetPath, desiredName);
-            AssetDatabase.SaveAssets();
-        }
-    }
+    //private void RenameToMatchQuestionAndAnswer()
+    //{
+    //    string desiredName = string.Format("{0} [{1}]",
+    //        question.Replace("?", ""),
+    //        answers[correctAnswer]);
+    //
+    //    string assetPath = AssetDatabase.GetAssetPath(this.GetInstanceID());
+    //    string shouldEndWith = "/" + desiredName + ".asset";
+    //    if (assetPath.EndsWith(shouldEndWith) == false)
+    //    {
+    //        Debug.Log("Want to rename to " + desiredName);
+    //        AssetDatabase.RenameAsset(assetPath, desiredName);
+    //        AssetDatabase.SaveAssets();
+    //    }
+    //}
 }

@@ -350,11 +350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2897044415607412869, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: m_text
-      value: Toggle Definitions On/Off
+      value: Definitions On/Off
       objectReference: {fileID: 0}
     - target: {fileID: 2897044415607412869, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: m_overflowMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2897044415607412869, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: m_textAlignment
@@ -1927,6 +1927,14 @@ PrefabInstance:
       propertyPath: displayPanel
       value: 
       objectReference: {fileID: 47787756}
+    - target: {fileID: 8008017616031462240, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: hintsController
+      value: 
+      objectReference: {fileID: 1219219648}
+    - target: {fileID: 8008017616031462240, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: descriptionsController
+      value: 
+      objectReference: {fileID: 1219219646}
     - target: {fileID: 8311637109708283498, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
       propertyPath: descriptionPanel
       value: 
@@ -1953,6 +1961,9 @@ PrefabInstance:
       objectReference: {fileID: 1219219646}
     m_RemovedComponents:
     - {fileID: 8311637109708283498, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 8159340454810489847, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 2456864123821117091, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+    - {fileID: 1862698018291853591, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
 --- !u!1 &1219219643
 GameObject:
@@ -2311,7 +2322,7 @@ Camera:
   m_GameObject: {fileID: 1445335161}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
