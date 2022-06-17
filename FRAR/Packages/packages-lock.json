@@ -1,29 +1,5 @@
 {
   "dependencies": {
-    "com.microsoft.azure.object-anchors.runtime": {
-      "version": "file:C:/Users/immer/Downloads/com.microsoft.azure.object-anchors.runtime-0.11.0(1).tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {}
-    },
-    "com.microsoft.azure.spatial-anchors-sdk.core": {
-      "version": "file:C:/Users/immer/Downloads/com.microsoft.azure.spatial-anchors-sdk.core-2.10.0-preview.1.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {
-        "com.unity.subsystemregistration": "1.0.6",
-        "com.unity.xr.arsubsystems": "4.0.8",
-        "com.unity.xr.arfoundation": "4.0.12"
-      }
-    },
-    "com.microsoft.azure.spatial-anchors-sdk.windows": {
-      "version": "file:C:/Users/immer/Downloads/com.microsoft.azure.spatial-anchors-sdk.windows-2.9.0.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {
-        "com.microsoft.azure.spatial-anchors-sdk.core": "2.9.0"
-      }
-    },
     "com.microsoft.mixedreality.openxr": {
       "version": "file:MixedReality/com.microsoft.mixedreality.openxr-0.9.3.tgz",
       "depth": 0,
@@ -82,13 +58,6 @@
       "dependencies": {
         "com.microsoft.mixedreality.toolkit.foundation": "2.7.2"
       }
-    },
-    "com.rufus31415.simplewebxr": {
-      "version": "https://github.com/Rufus31415/Simple-WebXR-Unity.git?path=/com.rufus31415.simplewebxr/",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "a9060413037d6b5dd985abba29ed17fcd51ff79d"
     },
     "com.unity.collab-proxy": {
       "version": "1.15.17",
