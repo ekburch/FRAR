@@ -1,8 +1,8 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using Microsoft.MixedReality.Toolkit.Utilities.Solvers;
 using UnityEngine;
+using Microsoft.MixedReality.Toolkit.Utilities.Solvers;
 
 namespace Microsoft.MixedReality.Toolkit.Examples.Demos
 {
