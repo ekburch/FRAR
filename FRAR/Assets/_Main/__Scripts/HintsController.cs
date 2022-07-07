@@ -25,6 +25,7 @@ namespace FRAR
             toggleEvent.AddListener(LabelToggle);
             //descriptionPanel = ObjectPool.SharedInstance.GetPooledObject();
             Toggle();
+            DescriptionToggle();
         }
 
         public void LabelToggle()

@@ -34,13 +34,13 @@ MonoBehaviour:
   - Name: ExploreMode
     Path: Assets/_Main/_Scenes/ExploreMode.unity
     Included: 1
-    BuildIndex: 1
+    BuildIndex: -1
     Tag: Untagged
     Asset: {fileID: 102900000, guid: f35e7c6ed02410c468badea5b929a337, type: 3}
   - Name: ChallengeMode
     Path: Assets/_Main/_Scenes/ChallengeMode.unity
     Included: 1
-    BuildIndex: 2
+    BuildIndex: -1
     Tag: Untagged
     Asset: {fileID: 102900000, guid: d189d1236ee5c4e4cbd7e7f6b756641b, type: 3}
   permittedLightingSceneComponentTypes:

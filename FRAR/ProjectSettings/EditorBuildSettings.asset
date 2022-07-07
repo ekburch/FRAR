@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/Mixed Reality Toolkit Foundation/2.7.2/Scene System Resources/DefaultManagerScene.unity
     guid: ae7bb08d297fb69408695d8de0962524
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Main/_Scenes/MainMenu.unity
     guid: 9df2cf5a3466b3c46a371bad3a830d46
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Main/_Scenes/ExploreMode.unity
     guid: f35e7c6ed02410c468badea5b929a337
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Main/_Scenes/ChallengeMode.unity
     guid: d189d1236ee5c4e4cbd7e7f6b756641b
   - enabled: 0
@@ -23,7 +23,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/Mixed Reality Toolkit Foundation/2.7.2/Scene System Resources/DefaultLightingScene.unity
     guid: 7e54e36c44f826c438c95da79f8de638
+  - enabled: 1
+    path: Assets/SimpleWebXR/Examples/Scenes/HitTestExample.unity
+    guid: 2ca6c05b6d4c7684aa7f02a113890db3
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: a3e312e11ae688d459c79d468ee9f552, type: 2}
+    WebXR.Settings: {fileID: 11400000, guid: 054656c09d444914fa52f7da1ec87750, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8a816c03f3181e243bc768a389b68633, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 811ec7a3832c1eb4aa7ab54b53c007e0, type: 2}
