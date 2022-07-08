@@ -18,6 +18,10 @@ public class PumpActionSM : StateMachine
     public PumpStep_5 PumpState5;
     [HideInInspector]
     public Cavitation CavitationState;
+    [HideInInspector]
+    public FailState FailState;
+    [HideInInspector]
+    public SuccessState SuccessState;
 
     private void Awake()
     {
@@ -28,6 +32,8 @@ public class PumpActionSM : StateMachine
         PumpState4 = new PumpStep_4(this);
         PumpState5 = new PumpStep_5(this);
         CavitationState = new Cavitation(this);
+        FailState = new FailState(this);
+        SuccessState = new SuccessState(this);
     }
     protected override BaseState GetInitialState()
     {
