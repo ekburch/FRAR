@@ -6,23 +6,17 @@ public class StateMachine : MonoBehaviour
 {
     BaseState currentState;
 
-    void Start()
+    public void Start()
     {
         currentState = GetInitialState();
         if (currentState != null)
             currentState.EnterState();
     }
 
-    void Update()
+    public void Update()
     {
         if (currentState != null)
-            currentState.UpdateLogic();
-    }
-
-    private void LateUpdate()
-    {
-        if (currentState != null)
-            currentState.UpdateSimulation();
+            currentState.UpdateState();
     }
 
     public void ChangeState(BaseState newState)

@@ -35,6 +35,7 @@ public class PumpActionSM : StateMachine
         FailState = new FailState(this);
         SuccessState = new SuccessState(this);
     }
+
     protected override BaseState GetInitialState()
     {
         return DefaultState;

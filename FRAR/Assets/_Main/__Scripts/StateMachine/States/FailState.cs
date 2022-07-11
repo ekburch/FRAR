@@ -11,9 +11,9 @@ public class FailState : BaseState
         base.EnterState();
     }
 
-    public override void UpdateLogic()
+    public override void UpdateState()
     {
-        base.UpdateLogic();
+        base.UpdateState();
     }
 
     public override void UpdateSimulation()

@@ -11,14 +11,9 @@ public class SuccessState : BaseState
         base.EnterState();
     }
 
-    public override void UpdateLogic()
+    public override void UpdateState()
     {
-        base.UpdateLogic();
-    }
-
-    public override void UpdateSimulation()
-    {
-        base.UpdateSimulation();
+        base.UpdateState();
     }
 
     public override void ExitState()

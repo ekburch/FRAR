@@ -18,16 +18,11 @@ public class Default : BaseState
         _Input = 0f;
     }
 
-    public override void UpdateLogic()
+    public override void UpdateState()
     {
-        base.UpdateLogic();
+        base.UpdateState();
         if (m_isPumpEngaged)
             StateMachine.ChangeState(((PumpActionSM) StateMachine).PumpState1);
-    }
-
-    public override void UpdateSimulation()
-    {
-        base.UpdateSimulation();
     }
 
     public override void ExitState()
