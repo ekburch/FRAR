@@ -36,6 +36,12 @@ public class PumpActionSM : StateMachine
         SuccessState = new SuccessState(this);
     }
 
+    public override void Start()
+    {
+        currentState = GetInitialState();
+        currentState.EnterState();
+    }
+
     protected override BaseState GetInitialState()
     {
         return DefaultState;

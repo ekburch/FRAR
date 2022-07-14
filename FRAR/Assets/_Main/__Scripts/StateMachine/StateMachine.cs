@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    BaseState currentState;
+    public BaseState currentState;
 
-    public void Start()
+    public virtual void Start()
     {
         currentState = GetInitialState();
         if (currentState != null)
             currentState.EnterState();
     }
 
-    public void Update()
+    public virtual void Update()
     {
         if (currentState != null)
             currentState.UpdateState();
@@ -37,7 +37,7 @@ public class StateMachine : MonoBehaviour
     /// </summary>
     private void OnGUI()
     {
-        string tmp = currentState != null ? currentState.m_name : "$No current state!";
+        string tmp = currentState != null ? currentState.m_name : $"No current state!";
         GUILayout.Label($"<color='black'><size=40>(tmp)</size></color>");
     }
 }

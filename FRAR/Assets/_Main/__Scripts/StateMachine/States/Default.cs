@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class Default : BaseState
 {
-    private float _Input;
-
-    private bool m_isPumpEngaged;
+    [SerializeField] private bool m_isPumpEngaged;
 
     public bool IsPumpEngaged { set => m_isPumpEngaged = value; }
 
     public Default(PumpActionSM pumpActionSM) : base("Default", pumpActionSM) { }
 
+    [SerializeField] UIManager m_uiManager = default;
+    [SerializeField] string m_InstructionsText = "";
+
     public override void EnterState()
     {
         base.EnterState();
-        _Input = 0f;
+        m_uiManager?.UpdateText(m_InstructionsText);
     }
 
     public override void UpdateState()
     {
         base.UpdateState();
         if (m_isPumpEngaged)
-            StateMachine.ChangeState(((PumpActionSM) StateMachine).PumpState1);
+            StateMachine.ChangeState(((PumpActionSM)StateMachine).PumpState1);
     }
 
     public override void ExitState()

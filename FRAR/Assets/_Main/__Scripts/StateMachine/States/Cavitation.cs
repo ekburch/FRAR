@@ -8,6 +8,9 @@ public class Cavitation : BaseState
 
     public Cavitation(PumpActionSM pumpActionSM) : base("Cavitation", pumpActionSM) { }
 
+    [SerializeField] UIManager m_uiManager = default;
+    [SerializeField] string m_InstructionsText = "";
+
     public override void EnterState()
     {
         base.EnterState();

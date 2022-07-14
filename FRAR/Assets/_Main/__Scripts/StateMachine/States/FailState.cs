@@ -16,11 +16,6 @@ public class FailState : BaseState
         base.UpdateState();
     }
 
-    public override void UpdateSimulation()
-    {
-        base.UpdateSimulation();
-    }
-
     public override void ExitState()
     {
         base.ExitState();
