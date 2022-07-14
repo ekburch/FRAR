@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseState
+namespace FRAR
 {
-    public string m_name;
-    protected StateMachine StateMachine;
-
-    public BaseState(string name, StateMachine stateMachine)
+    public abstract class BaseState
     {
-        this.m_name = name;
-        this.StateMachine = stateMachine;
-    }
+        public string m_name;
+        protected StateMachine StateMachine;
 
-    public virtual void EnterState() { }
-    public virtual void UpdateState() { }
-    public virtual void ExitState() { }
+        public BaseState(string name, StateMachine stateMachine)
+        {
+            this.m_name = name;
+            this.StateMachine = stateMachine;
+        }
+
+        public virtual void EnterState() { }
+        public virtual void UpdateState() { }
+        public virtual void ExitState() { }
+    }
 }

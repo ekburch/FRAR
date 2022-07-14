@@ -4,18 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UIManager : MonoBehaviour
+namespace FRAR
 {
-    [SerializeField] GameObject m_TextDisplay = default;
-    [SerializeField] TextMeshPro m_text = default;
-
-    public void ShowHideUIPrompt()
+    public class UIManager : MonoBehaviour
     {
-        m_TextDisplay.SetActive(!m_TextDisplay.activeSelf);
-    }
+        [SerializeField] GameObject m_TextDisplay = default;
+        [SerializeField] TextMeshProUGUI m_text = default;
 
-    public void UpdateText(string newText)
-    {
-        m_text.text = newText;
+        public void ShowHideUIPrompt()
+        {
+            m_TextDisplay.SetActive(!m_TextDisplay.activeSelf);
+        }
+
+        public void UpdateText(string newText)
+        {
+            m_text.text = newText;
+        }
     }
 }

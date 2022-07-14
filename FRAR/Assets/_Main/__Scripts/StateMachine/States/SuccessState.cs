@@ -2,22 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SuccessState : BaseState
+namespace FRAR
 {
-    public SuccessState(PumpActionSM pumpActionSM) : base("Success", pumpActionSM) { }
-
-    public override void EnterState()
+    public class SuccessState : BaseState
     {
-        base.EnterState();
-    }
+        public SuccessState(PumpActionSM pumpActionSM) : base("Success", pumpActionSM) { }
 
-    public override void UpdateState()
-    {
-        base.UpdateState();
-    }
+        public override void EnterState()
+        {
+            base.EnterState();
+        }
 
-    public override void ExitState()
-    {
-        base.ExitState();
+        public override void UpdateState()
+        {
+            base.UpdateState();
+        }
+
+        public override void ExitState()
+        {
+            base.ExitState();
+        }
     }
 }
