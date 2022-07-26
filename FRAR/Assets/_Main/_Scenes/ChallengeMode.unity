@@ -1397,7 +1397,7 @@ Camera:
   m_GameObject: {fileID: 169447260}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -8931,6 +8931,7 @@ GameObject:
   - component: {fileID: 1632470663}
   - component: {fileID: 1632470662}
   - component: {fileID: 1632470661}
+  - component: {fileID: 1632470664}
   m_Layer: 0
   m_Name: ChallengeMode
   m_TagString: Untagged
@@ -9011,6 +9012,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   challengeQuestionGameObjects: []
   challengeQuestionScriptableObjects: []
+--- !u!114 &1632470664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632470659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab0842034747bd54d819695da6f7444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1692215509
 GameObject:
   m_ObjectHideFlags: 0
@@ -11272,7 +11285,7 @@ PrefabInstance:
       objectReference: {fileID: 1632470661}
     - target: {fileID: 863700604837554943, guid: 518b861524315c343ac96062ca1e0298, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.46
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 863700604837554943, guid: 518b861524315c343ac96062ca1e0298, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11393,6 +11406,14 @@ PrefabInstance:
     - target: {fileID: 2877918104047617863, guid: 518b861524315c343ac96062ca1e0298, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.00624
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312530299370085784, guid: 518b861524315c343ac96062ca1e0298, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1632470664}
+    - target: {fileID: 3312530299370085784, guid: 518b861524315c343ac96062ca1e0298, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckToToggle
       objectReference: {fileID: 0}
     - target: {fileID: 3734217999581140144, guid: 518b861524315c343ac96062ca1e0298, type: 3}
       propertyPath: m_LocalPosition.x

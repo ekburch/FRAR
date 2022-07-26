@@ -18,6 +18,7 @@ namespace FRAR
         public override void EnterState()
         {
             base.EnterState();
+            Debug.Log("CURRENT STATE: DEFAULT");
             m_uiManager?.UpdateText(m_InstructionsText);
         }
 

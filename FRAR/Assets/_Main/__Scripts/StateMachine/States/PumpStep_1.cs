@@ -19,13 +19,21 @@ namespace FRAR
         public override void EnterState()
         {
             base.EnterState();
+            Debug.Log("CURRENT STATE: STEP 1");
         }
 
         public override void UpdateState()
         {
             base.UpdateState();
-            if (m_isTankToPumpOpen)
-                StateMachine.ChangeState(((PumpActionSM)StateMachine).PumpState2);
+            if (!m_isCavitating)
+            {
+                if (m_isTankToPumpOpen)
+                    StateMachine.ChangeState(((PumpActionSM)StateMachine).PumpState2);
+            }
+            else
+            {
+                StateMachine.ChangeState(((PumpActionSM)StateMachine).CavitationState);
+            }
         }
 
         public override void ExitState()

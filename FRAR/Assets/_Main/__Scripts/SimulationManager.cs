@@ -9,8 +9,23 @@ namespace FRAR
 {
     public class SimulationManager : MonoBehaviour
     {
+        public static SimulationManager Instance = null;
         public Dictionary<string, int> panelComponents = new Dictionary<string, int>();
-        
+
+        private void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Debug.LogError($"SimulationManager.Awake(): {Instance} already exists, destroying duplicate gameObject.");
+                Destroy(gameObject);
+            }
+            else
+            {
+                Instance = this;
+            }
+            DontDestroyOnLoad(gameObject);
+        }
+
         private void Start()
         {
             panelComponents.Clear();
