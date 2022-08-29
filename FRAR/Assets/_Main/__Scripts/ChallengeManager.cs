@@ -90,6 +90,7 @@ namespace FRAR
             //GetRandomChallengeQuestion();
             UpdateTextElements(m_bodyText, m_instructionsText);
             coroutine = ShowNextQuestion();
+            SoundManager.Instance.ChangeMusic(2);
         }
 
         public void StartGame()
@@ -103,6 +104,7 @@ namespace FRAR
             ToggleAnswerButtons(true);
             m_isQuizMode = true;
             GetRandomChallengeQuestion();
+            SoundManager.Instance.ChangeMusic(3);
         }
 
         private void GetRandomChallengeQuestion()
@@ -164,6 +166,7 @@ namespace FRAR
             if (m_isQuizMode)
             {
                 string tmp;
+                AudioClip clip = null;
                 if (answer == currentChallenge.CorrectAnswer)
                 {
                     //Increase our score
@@ -172,6 +175,7 @@ namespace FRAR
                     m_scoreManager.IncreaseCombo();
                     //Display text to confirm
                     tmp = "Correct!";
+                    clip = SoundManager.Instance.m_correctSFX;
                 }
                 else
                 {
@@ -179,8 +183,10 @@ namespace FRAR
                     m_scoreManager.ResetCombo();
                     //Display text to confirm we got it wrong
                     tmp = "Incorrect!";
+                    clip = SoundManager.Instance.m_incorrectSFX;
                 }
                 //Tell the display panel to go to the next question
+                SoundManager.Instance.PlayOneShot(clip);
                 UpdateTextElements(m_bodyText, tmp);
                 StartCoroutine(coroutine);
             }

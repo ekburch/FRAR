@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Tank_to_Pump
   m_EditorClassIdentifier: 
-  question: The pipe that leads from the apparatus water tank (e.g., a fire hydrant)
-    to the fire pump. This contains a check valve, which allows water to flow only
-    from the tank to the pump, and not back inside the tank.
+  question: This valve controls the flow between the water tank and pump inlet. With
+    this valve OPEN, water from the tank floods the pump intake manifold and slowly
+    primes the pump.
   answers:
-  - Main Intake
-  - Voltmeter
-  - Tank to Pump
-  - Tank Fill
+  - Flow-to-pump
+  - Water-to-pump
+  - Tank-to-pump
+  - Master-pump
   correctAnswer: 2

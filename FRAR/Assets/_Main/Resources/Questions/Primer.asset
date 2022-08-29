@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Primer
   m_EditorClassIdentifier: 
-  question: This is used to expel any air that may be trapped inside the pump and
-    during the drafting operations. It's usually not found on newer trucks.
+  question: If equipped, this is used to expel any air that may be trapped inside
+    the pump and during the drafting operations.
   answers:
-  - Pull to Prime
+  - Primer Valve
   - Tank Fill
-  - Discharge Relief Valve
+  - Discharge Master Relief Valve
   - Master Discharge
   correctAnswer: 0

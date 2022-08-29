@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Tank_Fill
   m_EditorClassIdentifier: 
-  question: 'This allows the pump operator to control the flow of water to the tank. '
+  question: This valve opens the connection from the discharge side of the pump to
+    the water tank.
   answers:
-  - 'Tank to Pump '
-  - Primer
-  - Throttle
+  - Flux Capacitor
+  - Tank Cooler
+  - Tank Discharge Diffuser
   - Tank Fill
   correctAnswer: 3

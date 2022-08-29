@@ -16,6 +16,22 @@ namespace FRAR
         public FailState FailState;
         public SuccessState SuccessState;
 
+        [SerializeField] private bool m_isPumpEngaged = default;
+        [SerializeField] private bool m_isTankToPumpOpen = default;
+        [SerializeField] private bool m_isCavitating = default;
+        [SerializeField] private bool m_stoppedCavitation = default;
+
+        public bool IsPumpEngaged { set => m_isPumpEngaged = value; }
+        public bool IsTankToPumpOpen { set => m_isTankToPumpOpen = value; }
+        public bool IsCavitating { set => m_isCavitating = value; }
+        public bool StoppedCavitation { set => m_stoppedCavitation = value; }
+
+        [SerializeField] int m_throttleLevel = default;
+        [SerializeField] int m_dischargePressure = default;
+
+        public int ThrottleLevel { set => m_throttleLevel = value; }
+        public int DischargePressure { set => m_dischargePressure = value; }
+
         private void Awake()
         {
             DefaultState = new Default(this);
@@ -37,6 +53,20 @@ namespace FRAR
         protected override BaseState GetInitialState()
         {
             return DefaultState;
+        }
+
+        public override void Update()
+        {
+            base.Update();
+            if (m_isPumpEngaged)
+            {
+                CheckToChangeState();
+            }
+        }
+
+        private void CheckToChangeState()
+        {
+
         }
     }
 }

@@ -1144,6 +1144,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1219219648}
     - target: {fileID: 3989297949628769863, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: _inputDescription
+      value: This controls the discharge pressure by passing water from the discharge
+        side of the pump back into the intake side of the pump
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989297949628769863, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
       propertyPath: descriptionsController
       value: 
       objectReference: {fileID: 1219219646}
@@ -1187,6 +1192,11 @@ PrefabInstance:
       propertyPath: hintsController
       value: 
       objectReference: {fileID: 1219219648}
+    - target: {fileID: 6617157059573804155, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
+      propertyPath: _inputDescription
+      value: This displays the water level inside the water tank, usually in one-quarter
+        increments
+      objectReference: {fileID: 0}
     - target: {fileID: 6617157059573804155, guid: 4d9fa8e0f42ac3042a87afe57869ee1e, type: 3}
       propertyPath: descriptionsController
       value: 

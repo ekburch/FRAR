@@ -17,6 +17,6 @@ MonoBehaviour:
   answers:
   - Relief Control Valve
   - Left Intake
-  - Water Level Panel
+  - Tank Level Indicator
   - Pump Engine Throttle
   correctAnswer: 2

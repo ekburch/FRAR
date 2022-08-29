@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
-  m_Name: Tachometer_2
+  m_Name: Pressure_Gov
   m_EditorClassIdentifier: 
-  question: The pump operator may use this instrument when troubleshooting any issue
-    with the pump. If the psi does not match the rpm of the engine, the operator
-    may recognize a problem with the pump and stop it altogether.
+  question: If this is equipped, it will regulate the engine speed automatically
+    to maintain the desired pump presssure.
   answers:
-  - Tachometer
-  - Relief Control Valve
-  - Tank to Pump
-  - Oil Pressure Gauge
-  correctAnswer: 0
+  - Automatic Control Unit
+  - Pump Pressure Regulator
+  - Truck Monkey
+  - Pressure Governor
+  correctAnswer: 3

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Pump_Engine_Throttle
   m_EditorClassIdentifier: 
-  question: This is where the pump operator can increase or decrease the engine speed
-    from the pump panel.
+  question: This is used by the pump operator to increase or decrease the engine
+    speed from the pump panel.
   answers:
   - Pump Pressure Controls
-  - Pump Engine Throttle
+  - Engine Throttle
   - Master Pump Pressure Intake Gauge
   - Voltmeter
-  correctAnswer: 2
+  correctAnswer: 1

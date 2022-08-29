@@ -142,9 +142,22 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 054656c09d444914fa52f7da1ec87750, type: 2}
-  - {fileID: -2781283632654968146, guid: 811ec7a3832c1eb4aa7ab54b53c007e0, type: 2}
-  - {fileID: 8391868852442786956, guid: 8a816c03f3181e243bc768a389b68633, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -621,11 +634,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: MRTKExamples
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: Assets\WSATestCertificate.pfx
-  metroCertificatePassword: 
+  metroCertificatePath: Assets/WSATestCertificate.pfx
+  metroCertificatePassword: "|m\x7F\x7F{c~h"
   metroCertificateSubject: RTI
   metroCertificateIssuer: RTI
-  metroCertificateNotAfter: 80b6ced91c93d801
+  metroCertificateNotAfter: 0021c65ef8c7d901
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: FRAR
@@ -647,7 +660,9 @@ PlayerSettings:
       InternetClient: True
       WebCam: True
       Microphone: True
-  metroTargetDeviceFamilies: {}
+  metroTargetDeviceFamilies:
+    Desktop: True
+    Holographic: True
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 

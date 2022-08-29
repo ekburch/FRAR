@@ -8,6 +8,9 @@ namespace FRAR
     {
         public BaseState currentState;
 
+        public SoundManager m_audioManager = default;
+        public UIManager m_uiManager = default;
+
         public virtual void Start()
         {
             currentState = GetInitialState();
