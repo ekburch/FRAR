@@ -21,7 +21,7 @@ namespace FRAR
         public AudioClip[] m_inGameMusic = default;
 
         [SerializeField] bool m_isLooping;
-        public bool IsLooping { set => m_isLooping = value; }
+        public bool IsLooping { get => m_isLooping; private set => m_isLooping = value; }
 
         bool isCurrentSource = true;
 
@@ -48,7 +48,7 @@ namespace FRAR
         private void Start()
         {
             m_currentTrackIndex = Random.Range(0, m_inGameMusic.Length);
-            PlayLooping(m_mainMenuMusic, m_isLooping);
+            //PlayLooping(m_mainMenuMusic, m_isLooping);
         }
 
         private void Update()
@@ -57,7 +57,7 @@ namespace FRAR
                 InitAudioSources();
             if (!IsPlaying)
             {
-                if (!m_isLooping)
+                if (!IsLooping)
                 {
                     m_currentTrackIndex++;
                     if (m_currentTrackIndex >= m_inGameMusic.Length)
@@ -78,7 +78,6 @@ namespace FRAR
 
         public void PlayOneShot(AudioClip clip)
         {
-            Debug.Log(clip.name);
             m_sfxSource.clip = clip;
             m_sfxSource.PlayOneShot(clip);
         }

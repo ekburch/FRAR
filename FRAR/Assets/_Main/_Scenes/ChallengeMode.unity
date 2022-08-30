@@ -11104,9 +11104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ed628cc738db545b39bcf523c7b50a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _quizGameState: 0
   m_questionLoader: {fileID: 1632470663}
   m_scoreManager: {fileID: 1632470662}
-  m_quizDuration: 200
+  m_quizDuration: 30
   m_timeToNextQuestion: 2
   m_bodyText: {fileID: 1114214334}
   m_titleText: {fileID: 159963878}
@@ -18586,6 +18587,75 @@ MonoBehaviour:
   _inputDescription: This gauge indicates whether the pump is overheating
   _inputValue: 0
   _timeUntilDialogResets: 2
+--- !u!1001 &5784475367522465924
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1676090444165392339, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561012425813725960, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561012425813725960, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561012425813725960, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561012425813725960, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561012425813725960, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561012425813725960, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561012425813725960, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561012425813725960, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561012425813725960, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561012425813725960, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561012425813725960, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7843056003054416530, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025204689505670095, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105351883254881388, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
+      propertyPath: m_isLooping
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8e1e097daccc5149b525a2caefd3c8a, type: 3}
 --- !u!23 &5800100753576792815
 MeshRenderer:
   m_ObjectHideFlags: 0

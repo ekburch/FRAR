@@ -15,8 +15,17 @@ namespace FRAR
     public class ChallengeManager : MonoBehaviour
     {
         public static ChallengeManager Instance;
-        //public ChallengeQuestion[] challenges;
-        //private static List<ChallengeQuestion> unansweredChallenges;
+        public enum EQuizGameState { None, Instructions, InGame, EndGame }
+        private static EQuizGameState _QuizGameState = EQuizGameState.Instructions;
+
+        public delegate void CallbackDelegate();
+        public static event CallbackDelegate QuizGameStateChangeDelegate;
+
+        [Header("Static properties")]
+        [Tooltip("This shows the game state in the Inspector and is set by the "
+        + "QuizGameStateDelegate whenever QuizGameState changes.")]
+        [SerializeField] protected EQuizGameState _quizGameState;
+
         [Header("Required to function")]
         [SerializeField] private QuestionLoader m_questionLoader = default;
         [SerializeField] private ScoreManager m_scoreManager = default;
@@ -76,6 +85,21 @@ namespace FRAR
             {
                 Instance = this;
             }
+
+            QuizGameStateChangeDelegate += QuizStateChanged;
+            _quizGameState = EQuizGameState.Instructions;
+            QuizGameState = _quizGameState;
+        }
+
+        void QuizStateChanged()
+        {
+            _quizGameState = QuizGameState;
+        }
+
+        private void OnDestroy()
+        {
+            QuizGameStateChangeDelegate -= QuizStateChanged;
+            QuizGameState = EQuizGameState.None;
         }
 
         private void Start()
@@ -95,6 +119,7 @@ namespace FRAR
 
         public void StartGame()
         {
+            QuizGameState = EQuizGameState.InGame;
             SetUpQuizTimer();
             m_scoreManager.ResetScoreValue();
             UpdateTextElements(m_titleText, "Question");
@@ -104,7 +129,11 @@ namespace FRAR
             ToggleAnswerButtons(true);
             m_isQuizMode = true;
             GetRandomChallengeQuestion();
-            SoundManager.Instance.ChangeMusic(3);
+            
+            if (SoundManager.Instance?.IsLooping == true)
+            {
+                SoundManager.Instance?.ChangeMusic(3);
+            }
         }
 
         private void GetRandomChallengeQuestion()
@@ -166,7 +195,7 @@ namespace FRAR
             if (m_isQuizMode)
             {
                 string tmp;
-                AudioClip clip = null;
+                AudioClip clip;
                 if (answer == currentChallenge.CorrectAnswer)
                 {
                     //Increase our score
@@ -191,7 +220,7 @@ namespace FRAR
                 StartCoroutine(coroutine);
             }
         }
-        #region
+        #region UI Answer Submission
 #if !GAZE_CONTROLS
         public void SubmitAnswer(int answer)
         {
@@ -205,7 +234,7 @@ namespace FRAR
             {
                 ToggleAnswerButtons(false);
                 string tmp;
-
+                AudioClip clip;
                 if (isCorrect)
                 {
                     //Increase our score
@@ -214,6 +243,8 @@ namespace FRAR
                     m_scoreManager.IncreaseCombo();
                     //Display text to confirm
                     tmp = "Correct!";
+                    //Select the audio clip
+                    clip = SoundManager.Instance?.m_correctSFX;
                 }
                 else
                 {
@@ -221,8 +252,10 @@ namespace FRAR
                     m_scoreManager.ResetCombo();
                     //Display text to confirm we got it wrong
                     tmp = "Incorrect!";
+                    clip = SoundManager.Instance?.m_incorrectSFX;
                 }
                 //Tell the display panel to go to the next question
+                SoundManager.Instance?.PlayOneShot(clip);
                 UpdateTextElements(m_bodyText, tmp);
                 Invoke("GetRandomChallengeQuestion", m_timeToNextQuestion);
             }
@@ -268,6 +301,7 @@ namespace FRAR
         #endregion
         public void EndGame()
         {
+            QuizGameState = EQuizGameState.EndGame;
             m_timerIsActive = false;
             UpdateTextElements(m_bodyText, m_summaryText + "Your final score is " + m_scoreManager.Score.ToString());
             UpdateTextElements(m_titleText, "Game over!");
@@ -278,6 +312,23 @@ namespace FRAR
             m_scoreText.gameObject.SetActive(false);
             m_isQuizMode = false;
         }
+
+        #region Static Properties
+        public static EQuizGameState QuizGameState
+        {
+            get => _QuizGameState;
+            set
+            {
+                if (value != _QuizGameState)
+                {
+                    _QuizGameState = value;
+
+                    QuizGameStateChangeDelegate?.Invoke();
+                }
+            }
+        }
+
+        #endregion
     }
 }
 
