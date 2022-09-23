@@ -337,7 +337,7 @@ MonoBehaviour:
   m_audioSource0: {fileID: 9025204689505670095}
   m_audioSource1: {fileID: 1676090444165392339}
   m_sfxSource: {fileID: 7882439268663494664}
-  m_mainMenuMusic: {fileID: 0}
+  m_mainMenuMusic: {fileID: 8300000, guid: 204e3fed09ea4ff4db726656360c55e7, type: 3}
   m_quizMenuMusic: {fileID: 8300000, guid: 3baeb0c8050889d45b736340e487466f, type: 3}
   m_correctSFX: {fileID: 8300000, guid: 7bf68fc333838ce4ca24bc91e29be2fb, type: 3}
   m_incorrectSFX: {fileID: 8300000, guid: 72d7e42cfea669745be6a3f642ac6fde, type: 3}
@@ -347,5 +347,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4cf9271a4dc9388408a66e95a7f9859e, type: 3}
   - {fileID: 8300000, guid: d82a96f90ec3b7c43840a9d302eec3dd, type: 3}
   - {fileID: 8300000, guid: 90261bab8e8f53e4f83ed91bbeed912d, type: 3}
-  m_isLooping: 0
+  m_isLooping: 1
   m_currentTrackIndex: 0

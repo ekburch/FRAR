@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Gauge_Ports
   m_EditorClassIdentifier: 
-  question: Standared on most pumps, these allow maintenance to connect to the pump
+  question: Standard on most pumps, these allow maintenance to connect to the pump
     and monitor intake and discharge pressure while performing a pump test.
   answers:
   - Internal Computer

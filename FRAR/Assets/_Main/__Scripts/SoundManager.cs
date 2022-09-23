@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace FRAR
 {
@@ -48,7 +49,7 @@ namespace FRAR
         private void Start()
         {
             m_currentTrackIndex = Random.Range(0, m_inGameMusic.Length);
-            //PlayLooping(m_mainMenuMusic, m_isLooping);
+			ChangeMusic(1);
         }
 
         private void Update()
@@ -63,10 +64,10 @@ namespace FRAR
                     if (m_currentTrackIndex >= m_inGameMusic.Length)
                         m_currentTrackIndex = 0;
                     AudioClip newClip = m_inGameMusic[m_currentTrackIndex];
-                    CrossFadeAudio(newClip, 1f, .5f, 0f);
+                    CrossFadeAudio(newClip, 1f, .25f, 0f);
                 }
-            }
-        }
+			}
+		}
 
         public void PlayLooping(AudioClip clip, bool isLooping)
         {
@@ -160,6 +161,7 @@ namespace FRAR
             newSource.clip = clip;
             newSource.Play();
             newSource.volume = 0;
+			newSource.loop = IsLooping;
 
             if (_currSourceFadeRoutine != null)
             {

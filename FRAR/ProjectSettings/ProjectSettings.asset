@@ -159,6 +159,7 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -632,14 +633,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: MRTKExamples
+  metroPackageName: FRAR
   metroPackageVersion: 1.0.0.0
   metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: "|m\x7F\x7F{c~h"
   metroCertificateSubject: RTI
   metroCertificateIssuer: RTI
   metroCertificateNotAfter: 0021c65ef8c7d901
-  metroApplicationDescription: Template_3D
+  metroApplicationDescription: Training for First Responders
   wsaImages: {}
   metroTileShortName: FRAR
   metroTileShowName: 0

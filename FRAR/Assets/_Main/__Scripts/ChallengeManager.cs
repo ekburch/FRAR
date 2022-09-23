@@ -114,7 +114,7 @@ namespace FRAR
             //GetRandomChallengeQuestion();
             UpdateTextElements(m_bodyText, m_instructionsText);
             coroutine = ShowNextQuestion();
-            SoundManager.Instance.ChangeMusic(2);
+            SoundManager.Instance?.ChangeMusic(2);
         }
 
         public void StartGame()
@@ -302,15 +302,15 @@ namespace FRAR
         public void EndGame()
         {
             QuizGameState = EQuizGameState.EndGame;
+			m_isQuizMode = false;
             m_timerIsActive = false;
-            UpdateTextElements(m_bodyText, m_summaryText + "Your final score is " + m_scoreManager.Score.ToString());
+            UpdateTextElements(m_bodyText, m_summaryText + " Your final score is " + m_scoreManager.Score.ToString());
             UpdateTextElements(m_titleText, "Game over!");
             StopAllCoroutines();
             m_mainButton.gameObject.SetActive(true);
             ToggleAnswerButtons(false);
             m_timerText.gameObject.SetActive(false);
             m_scoreText.gameObject.SetActive(false);
-            m_isQuizMode = false;
         }
 
         #region Static Properties
