@@ -12,7 +12,7 @@ namespace FRAR
         public int Score { get; private set; }
         public int AnswerStreak { get; private set; }
 
-        private int multiplier = 1;
+		public int multiplier = 1;
 
         private void Awake()
         {
@@ -32,7 +32,7 @@ namespace FRAR
             UpdateMultiplier(AnswerStreak);
         }
 
-        private int UpdateMultiplier(int amount)
+        public int UpdateMultiplier(int amount)
         {
             multiplier = (int)Mathf.Clamp(Mathf.FloorToInt(amount / 3), 1f, 4f);
             return multiplier;

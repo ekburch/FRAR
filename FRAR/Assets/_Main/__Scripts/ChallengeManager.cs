@@ -35,7 +35,7 @@ namespace FRAR
 
         [Header("Gamified Elements")]
         [SerializeField]
-        [Tooltip("How long the quiz lasts")]
+        [Tooltip("How long the quiz lasts (in seconds)")]
         private float m_quizDuration = default;
         [SerializeField]
         [Tooltip("How long of a delay between questions")]
@@ -50,6 +50,8 @@ namespace FRAR
         private TextMeshPro m_timerText = default;
         [SerializeField]
         private TextMeshPro m_scoreText = default;
+        [SerializeField] TextMeshPro m_multiplerText = default;
+        [SerializeField] Slider m_slider = default;
         [SerializeField]
         private PressableButtonHoloLens2 m_mainButton = default;
         [SerializeField]
@@ -120,6 +122,7 @@ namespace FRAR
         public void StartGame()
         {
             QuizGameState = EQuizGameState.InGame;
+            m_isQuizMode = true;
             SetUpQuizTimer();
             m_scoreManager.ResetScoreValue();
             UpdateTextElements(m_titleText, "Question");
@@ -127,7 +130,6 @@ namespace FRAR
             m_timerText.gameObject.SetActive(true);
             m_scoreText.gameObject.SetActive(true);
             ToggleAnswerButtons(true);
-            m_isQuizMode = true;
             GetRandomChallengeQuestion();
             
             if (SoundManager.Instance?.IsLooping == true)
@@ -176,6 +178,9 @@ namespace FRAR
                     m_currentTime = Mathf.Min(m_currentTime + Time.deltaTime, m_endTime);
                     DisplayTime(m_timeRemaining -= Time.deltaTime);
                     UpdateTextElements(m_scoreText, m_scoreManager.Score.ToString());
+                    int multiplier = m_scoreManager.multiplier;
+                    m_slider.value = multiplier;
+                    UpdateTextElements(m_multiplerText, multiplier.ToString());
                 }
             }
         }
@@ -304,13 +309,13 @@ namespace FRAR
             QuizGameState = EQuizGameState.EndGame;
 			m_isQuizMode = false;
             m_timerIsActive = false;
-            UpdateTextElements(m_bodyText, m_summaryText + " Your final score is " + m_scoreManager.Score.ToString());
-            UpdateTextElements(m_titleText, "Game over!");
-            StopAllCoroutines();
-            m_mainButton.gameObject.SetActive(true);
+			StopAllCoroutines();
             ToggleAnswerButtons(false);
             m_timerText.gameObject.SetActive(false);
             m_scoreText.gameObject.SetActive(false);
+            m_mainButton.gameObject.SetActive(true);
+            UpdateTextElements(m_titleText, "Game over!");
+            UpdateTextElements(m_bodyText, m_summaryText + " Your final score is " + m_scoreManager.Score.ToString());
         }
 
         #region Static Properties
