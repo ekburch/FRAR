@@ -199,7 +199,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
                 bbox.HideElementsInInspector = false;
                 bbox.WireframeEdgeRadius = .05f;
                 multiRoot.AddComponent<ConstraintManager>();
-                multiRoot.AddComponent<ObjectManipulator>();
+                multiRoot.AddComponent<ObjectManipulatorOVR>();
 
                 SetStatus("Randomize Child Scale for skewing");
                 yield return WaitForSpeechCommand();

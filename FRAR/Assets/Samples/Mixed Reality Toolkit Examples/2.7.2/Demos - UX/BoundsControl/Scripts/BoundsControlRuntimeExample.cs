@@ -202,7 +202,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos
                 boundsControl.HideElementsInInspector = false;
                 boundsControl.LinksConfig.WireframeEdgeRadius = .05f;
                 multiRoot.AddComponent<ConstraintManager>();
-                multiRoot.AddComponent<ObjectManipulator>();
+                multiRoot.AddComponent<ObjectManipulatorOVR>();
 
                 SetStatus("Randomize Child Scale for skewing");
                 yield return WaitForSpeechCommand();
