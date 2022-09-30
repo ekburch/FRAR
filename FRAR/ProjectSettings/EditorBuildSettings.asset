@@ -33,6 +33,7 @@ EditorBuildSettings:
     path: Assets/Samples/Mixed Reality Toolkit Foundation/2.7.2/Scene System Resources/DefaultLightingScene.unity
     guid: 7e54e36c44f826c438c95da79f8de638
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bea9e6d414db83e41a642d5ca8cfdfb3, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: a3e312e11ae688d459c79d468ee9f552, type: 2}
     WebXR.Settings: {fileID: 11400000, guid: 054656c09d444914fa52f7da1ec87750, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8a816c03f3181e243bc768a389b68633, type: 2}

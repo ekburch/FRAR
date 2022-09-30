@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8687984319932881444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: Android Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: -4669467116415157983}
+  m_InitManagerOnStart: 1
 --- !u!114 &-5283441730622946677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,6 +31,23 @@ MonoBehaviour:
   m_AutomaticRunning: 0
   m_Loaders:
   - {fileID: 11400000, guid: e3917ba0d5284da4d970bc76c6bf5970, type: 2}
+--- !u!114 &-4669467116415157983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: Android Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders:
+  - {fileID: 11400000, guid: 0c581788be2989d40ab0a6f95907be31, type: 2}
 --- !u!114 &-1446865250194809149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,11 +77,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dc886499c26824283350fa532d087d, type: 3}
   m_Name: XRGeneralSettings
   m_EditorClassIdentifier: 
-  Keys: 0e000000010000000d000000
+  Keys: 0e000000010000000d00000007000000
   Values:
   - {fileID: 5409925280857037485}
   - {fileID: 8421719183193273274}
   - {fileID: 8391868852442786956}
+  - {fileID: -8687984319932881444}
 --- !u!114 &5130019686017686730
 MonoBehaviour:
   m_ObjectHideFlags: 0
