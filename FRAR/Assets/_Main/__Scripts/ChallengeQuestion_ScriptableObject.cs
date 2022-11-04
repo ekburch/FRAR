@@ -26,6 +26,12 @@ public class ChallengeQuestion_ScriptableObject : ScriptableObject
         //RenameToMatchQuestionAndAnswer();
     }
 
+    public bool IsCorrectAnswer (string _answer)
+    {
+        string answer = answers[correctAnswer];
+        return answer == _answer;
+    }
+
     //private void RenameToMatchQuestionAndAnswer()
     //{
     //    string desiredName = string.Format("{0} [{1}]",

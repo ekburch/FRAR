@@ -66,6 +66,17 @@ namespace FRAR
         [SerializeField]
         [Tooltip("Summary at the end of challenge mode")]
         private String m_summaryText = "";
+        [SerializeField]
+        [Tooltip("Instructions text rect transform")]
+        private RectTransform m_instTextRectTransform = default;
+        [SerializeField]
+        private Vector2 m_rectTransformLargeValue = default;
+        [SerializeField]
+        private Vector2 m_rectTransformSmallValue = default;
+        [SerializeField]
+        private Vector3 m_rectTransformStartingPos = default;
+        [SerializeField]
+        private Vector3 m_rectTransformInGamePos = default;
 
         float m_currentTime = default;
         float m_endTime = default;
@@ -114,6 +125,8 @@ namespace FRAR
             //Will need to add logic to let user start quiz after a prompt with yes/no buttons
 
             //GetRandomChallengeQuestion();
+            m_instTextRectTransform.localPosition = m_rectTransformStartingPos;
+            m_instTextRectTransform.sizeDelta = m_rectTransformLargeValue;
             UpdateTextElements(m_bodyText, m_instructionsText);
             coroutine = ShowNextQuestion();
             SoundManager.Instance?.ChangeMusic(2);
@@ -125,6 +138,8 @@ namespace FRAR
             m_isQuizMode = true;
             SetUpQuizTimer();
             m_scoreManager.ResetScoreValue();
+            m_instTextRectTransform.sizeDelta = m_rectTransformSmallValue;
+            m_instTextRectTransform.localPosition = m_rectTransformInGamePos;
             UpdateTextElements(m_titleText, "Question");
             m_mainButton.gameObject.SetActive(false);
             m_timerText.gameObject.SetActive(true);
@@ -194,8 +209,8 @@ namespace FRAR
 
             UpdateTextElements(m_timerText, string.Format("{0:00}:{1:00}", minutes, seconds));
         }
-
-        public void CheckAnswer(string answer)
+		#region Old submission
+		public void CheckAnswer(string answer)
         {
             if (m_isQuizMode)
             {
@@ -225,9 +240,10 @@ namespace FRAR
                 StartCoroutine(coroutine);
             }
         }
-        #region UI Answer Submission
+		#endregion
+		#region UI Answer Submission
 #if !GAZE_CONTROLS
-        public void SubmitAnswer(int answer)
+		public void SubmitAnswer(int answer)
         {
             bool isCorrect = answer == currChallengeQuestion.CorrectAnswer;
             CheckSubmittedAnswer(isCorrect);
@@ -314,6 +330,8 @@ namespace FRAR
             m_timerText.gameObject.SetActive(false);
             m_scoreText.gameObject.SetActive(false);
             m_mainButton.gameObject.SetActive(true);
+            m_instTextRectTransform.localPosition = m_rectTransformStartingPos;
+            m_instTextRectTransform.sizeDelta = m_rectTransformLargeValue;
             UpdateTextElements(m_titleText, "Game over!");
             UpdateTextElements(m_bodyText, m_summaryText + " Your final score is " + m_scoreManager.Score.ToString());
         }

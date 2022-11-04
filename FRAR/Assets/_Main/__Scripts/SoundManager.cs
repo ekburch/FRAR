@@ -49,7 +49,8 @@ namespace FRAR
         private void Start()
         {
             m_currentTrackIndex = Random.Range(0, m_inGameMusic.Length);
-			ChangeMusic(1);
+            PlayLooping(m_mainMenuMusic, true);
+			//ChangeMusic(1);
         }
 
         private void Update()
@@ -93,32 +94,25 @@ namespace FRAR
         public void ChangeMusic(int track)
         {
             AudioClip clip = null;
-            if (IsPlaying)
-            {
-                switch(track)
-                {
-                    case 1:
-                        IsLooping = true;
-                        clip = m_mainMenuMusic;
-                        break;
-                    case 2:
-                        IsLooping = true;
-                        clip = m_quizMenuMusic;
-                        break;
-                    case 3:
-                        IsLooping = false;
-                        clip = m_inGameMusic[m_currentTrackIndex];
-                        break;
-                    default:
-                        break;
-                }
-                CrossFadeAudio(clip, 1f, 0.25f, 0f);
-            }
-            else
-            {
-                return;
-            }
-        }
+			switch (track)
+			{
+			    case 1:
+					IsLooping = true;
+					clip = m_mainMenuMusic;
+					break;
+				case 2:
+					IsLooping = true;
+					clip = m_quizMenuMusic;
+					break;
+				case 3:
+					IsLooping = false;
+					clip = m_inGameMusic[m_currentTrackIndex];
+					break;
+				default:
+					break;
+				}
+			CrossFadeAudio(clip, 1f, 0.25f, 0f);
+		}
 
         //To Do: Replace with an actual generic function
         public void StopAudioSource()

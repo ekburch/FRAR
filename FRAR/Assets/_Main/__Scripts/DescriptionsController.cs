@@ -36,6 +36,9 @@ namespace FRAR
             set => _showDiscriptions = value; 
         }
 
+        [SerializeField] GameObject chevron = default;
+        [SerializeField] DirectionalIndicator m_chevronDirectionalIndicator = default;
+
         private void Start()
         {
             _showDiscriptions = true;
@@ -54,6 +57,7 @@ namespace FRAR
                     m_descriptionText.text = newDescription;
 
                     contentBackPanelRenderer.enabled = isActiveAndEnabled;
+                    m_chevronDirectionalIndicator.DirectionalTarget = transform;
                 }
                 else
                 {

@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Engine_Coolant
   m_EditorClassIdentifier: 
-  question: 'This allows the operator to monitor the temperature of the coolant inside
-    of the engine of the apparatus. Too high, and it can cause severe damage to the
-    engine and possibly cause it to shut down. Too low, and the engine may not operate
-    as efficiently. '
+  question: 'This lets the operator keep track of the temperature of the coolant
+    inside of an engine. '
   answers:
   - Engine Coolant
   - Tank to Pump

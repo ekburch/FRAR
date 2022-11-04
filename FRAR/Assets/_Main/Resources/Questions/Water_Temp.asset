@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Water_Temp
   m_EditorClassIdentifier: 
-  question: This gauge indicates if the pump is overheating
+  question: This gauge shows whether the pump is overheating or not.
   answers:
   - Tachometer
   - Master Intake Gauge

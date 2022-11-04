@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Primer
   m_EditorClassIdentifier: 
-  question: If equipped, this is used to expel any air that may be trapped inside
-    the pump and during the drafting operations.
+  question: This is used to eject any air trapped inside the pump and during drafting
+    operations. It's not usually found on newer trucks.
   answers:
   - Primer Valve
   - Tank Fill

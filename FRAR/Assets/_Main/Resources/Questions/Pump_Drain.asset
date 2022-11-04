@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Pump_Drain
   m_EditorClassIdentifier: 
-  question: This will empty both the discharge and inlet manifolds of water when
-    opened.
+  question: When opened, this empties water from both the discharge and intake manifolds.
   answers:
   - Discharge Drains
   - Intake Drains

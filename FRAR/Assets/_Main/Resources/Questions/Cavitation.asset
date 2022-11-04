@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Cavitation
   m_EditorClassIdentifier: 
-  question: This phenomenon is the rapid succession and released implosions of gaseous
-    cavities which cause an intense rattling sensation that can damage a pump.
+  question: This phenomenon causes intense rattling that can damage a pump.
   answers:
   - The Big Bang
   - Cavitation

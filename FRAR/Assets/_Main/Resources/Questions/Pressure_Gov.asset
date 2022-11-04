@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Pressure_Gov
   m_EditorClassIdentifier: 
-  question: If this is equipped, it will regulate the engine speed automatically
-    to maintain the desired pump presssure.
+  question: If a device has this, it automatically controls engine speed to maintain
+    the desired pump presssure.
   answers:
   - Automatic Control Unit
   - Pump Pressure Regulator

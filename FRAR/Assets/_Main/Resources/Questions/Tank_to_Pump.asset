@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Tank_to_Pump
   m_EditorClassIdentifier: 
-  question: This valve controls the flow between the water tank and pump inlet. With
-    this valve OPEN, water from the tank floods the pump intake manifold and slowly
+  question: This valve controls the flow between the water tank and pump intake.
+    With it is OPEN, water from the tank floods the pump intake manifold and slowly
     primes the pump.
   answers:
   - Flow-to-pump

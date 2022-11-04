@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Tank_Fill
   m_EditorClassIdentifier: 
-  question: This valve opens the connection from the discharge side of the pump to
-    the water tank.
+  question: When opened, this valve connects the discharge side of the pump to the
+    water tank.
   answers:
   - Flux Capacitor
   - Tank Cooler

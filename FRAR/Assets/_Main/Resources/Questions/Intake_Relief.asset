@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Intake_Relief
   m_EditorClassIdentifier: 
-  question: This pressure regulator prevents a pressure spike in intake water from
-    passing to hoses through the discharge side of the pump. If pressure goes over
-    the pressure setting, the valve opens and allows water to flow out the relief
-    outlet.
+  question: This regulator prevents a spike in the pressure of intake water by passing
+    water through the discharge side of the pump to a valve that opens and allows
+    water to flow out.
   answers:
   - Master Pressure Valve
   - Intake Relief Valve

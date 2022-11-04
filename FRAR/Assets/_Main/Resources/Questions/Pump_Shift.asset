@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Pump_Shift
   m_EditorClassIdentifier: 
-  question: If installed, this control is located on the pump panel. This handle
-    controls the shift lever on the pump and will be used if the air shift fails
-    to engage the pump.
+  question: If installed, this handle controls the shift lever on the pump and will
+    be used if the air shift fails to engage the pump.
   answers:
   - Manual Pump Shift Override
   - Powered Take Off (PTO)

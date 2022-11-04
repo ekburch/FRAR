@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Oil_Pressure
   m_EditorClassIdentifier: 
-  question: This indicates whether an adequate supply of oil is being distributed
-    to various areas of the engine.
+  question: This shows whether enough oil is being sent to different parts of the
+    engine.
   answers:
   - Engine Fuel
   - Oil Pressure

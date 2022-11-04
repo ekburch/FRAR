@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Control_Lever
   m_EditorClassIdentifier: 
-  question: This lever allows a driver/operator to engage the pump.
+  question: This lever lets a driver/operator engage the pump.
   answers:
   - Power Take Off Switch
   - Pump Engage Master Control Handle

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Voltmeter
   m_EditorClassIdentifier: 
-  question: This measures the voltage across the battery terminals and gives an indication
-    of the battery's condition.
+  question: This measures a battery's voltage at its terminals and gives an idea
+    about the battery's condition.
   answers:
   - Engine Fuel
   - Oil Pressure

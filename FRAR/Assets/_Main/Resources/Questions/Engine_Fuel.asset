@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Engine_Fuel
   m_EditorClassIdentifier: 
-  question: This is an instrument that indicates the amount of fuel in the fuel tank.
+  question: This shows how much fuel is in the fuel tank.
   answers:
   - Fuel Gauge
   - Oil Gauge

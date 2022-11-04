@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Main_Intake
   m_EditorClassIdentifier: 
-  question: Where is external water is fed into the truck?
+  question: Where does external water get fed into the truck?
   answers:
   - Main Intake
   - Master Discharge

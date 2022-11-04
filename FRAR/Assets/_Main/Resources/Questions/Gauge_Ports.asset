@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Gauge_Ports
   m_EditorClassIdentifier: 
-  question: Standard on most pumps, these allow maintenance to connect to the pump
-    and monitor intake and discharge pressure while performing a pump test.
+  question: These are standard on most pumps and allow maintenance staff to connect
+    to the pump to monitor intake and discharge pressure during a pump test.
   answers:
   - Internal Computer
   - Rear Connection Port

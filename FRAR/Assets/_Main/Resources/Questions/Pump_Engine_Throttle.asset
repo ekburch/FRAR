@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Pump_Engine_Throttle
   m_EditorClassIdentifier: 
-  question: This is used by the pump operator to increase or decrease the engine
-    speed from the pump panel.
+  question: The pump operator uses this to increase or decrease the engine speed
+    from the pump panel.
   answers:
   - Pump Pressure Controls
   - Engine Throttle

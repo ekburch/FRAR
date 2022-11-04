@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6b22a030c68984ca60db6e55ee1578, type: 3}
   m_Name: Relief_Control_Valve
   m_EditorClassIdentifier: 
-  question: This controls the discharge pressure by passing water from the discharge
-    side of the pump back into the intake side of the pump.
+  question: This controls the discharge pressure by sending water from the side of
+    the pump that discharges water back into the side of the pump that takes in water.
   answers:
   - Main Intake
   - Engine Coolant
