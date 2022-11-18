@@ -2,6 +2,7 @@ using Microsoft.MixedReality.Toolkit.Utilities;
 using Microsoft.MixedReality.Toolkit.UI;
 using Microsoft.MixedReality.Toolkit;
 using UnityEngine;
+using System.Collections;
 
 namespace FRAR
 {
@@ -38,16 +39,30 @@ namespace FRAR
 
         public override TransformFlags ConstraintType => TransformFlags.Move;
 
-        [SerializeField] Transform m_frontBounds = null;
+        [SerializeField] Transform m_frontBounds = default;
         public Transform FrontBounds
 		{
             get => m_frontBounds;
 			set => m_frontBounds = value;
 		}
 
+        [SerializeField] Collider m_bounds = default;
+        public Collider Bounds
+        {
+            get => m_bounds;
+            set => m_bounds = value;
+        }
+
+        [SerializeField] private const float MinDistanceFromBounds = 0.001f;
+        [SerializeField] private const float MaxDistanceFromBounds = 0.01f;
+
 		private Vector3 startPosition = default;
         private Collider m_collider = default;
         [SerializeField] Collider m_collisionTrigger = default;
+
+        private IEnumerator m_coroutine;
+        private bool isWithinBounds;
+        private bool isStopped;
 
         #endregion Properties
 
@@ -55,13 +70,44 @@ namespace FRAR
 
         private void Start()
         {
+            m_coroutine = CheckToStopManipulation();
             startPosition = transform.localPosition;
             m_collider = GetComponent<Collider>();
+            StartCoroutine(m_coroutine);
         }
 
 		private void Update()
 		{
+            
             TryStopManipulation();
+        }
+
+        private IEnumerator CheckToStopManipulation()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(0.01f);
+
+                if (!isWithinBounds)
+                {
+                    if (Vector3.Distance(transform.position, m_bounds.transform.position) > MaxDistanceFromBounds)
+                    {
+                        isStopped = true;
+                        var objectManipulator = GetComponent<ObjectManipulator>();
+                        objectManipulator.ForceEndManipulation();
+                        transform.position = m_bounds.transform.position;
+                    }
+                }
+                else if (isWithinBounds)
+                {
+                    if (!(Vector3.Distance(transform.position, m_bounds.transform.position) > MinDistanceFromBounds)) continue;
+                    isStopped = false;
+                }
+                else
+                {
+                    break;
+                }
+            }
         }
 
 		#endregion
@@ -123,6 +169,28 @@ namespace FRAR
         /// </summary>
         public void TryStopManipulation()
         {
+            if (m_bounds != null)
+            {
+                if (m_bounds.bounds.Contains(transform.position))
+                {
+                    isWithinBounds = true;
+                    m_collider.enabled = true;
+                }
+                else
+                {
+                    Debug.Log("Outside of boundaries!");
+					GetComponent<ConstraintManager>();
+					var objectManipulator = GetComponent<ObjectManipulator>();
+					if (objectManipulator != null)
+					{
+                        Debug.Log("Force end manipulation");
+						objectManipulator.ForceEndManipulation();
+                        isWithinBounds = false;
+                        m_collider.enabled = false;
+                        //transform.position = m_bounds.bounds.center;
+					}
+				}
+            }
             if (m_collisionTrigger != null)
 			{
 				if (m_collisionTrigger.bounds.Intersects(m_collider.bounds))
@@ -149,6 +217,15 @@ namespace FRAR
                 }
             }
 		}
+
+        public void ClampWithinBounds()
+        {
+            Vector3 position = transform.position;
+			float yMin = m_bounds.bounds.min.y;
+			float yMax = m_bounds.bounds.max.y;
+			float movementClamp = Mathf.Clamp(transform.position.y, yMin, yMax);
+            transform.position = new Vector3(position.x, movementClamp, position.z);
+        }
 
 		#endregion Public Methods
 	}

@@ -6,14 +6,14 @@ namespace FRAR
 {
     public class StayWithinBounds : MonoBehaviour
     {
-        [SerializeField] Transform m_frontBounds = null;
+        [SerializeField] Transform m_frontBounds = default;
         public Transform FrontBounds
         {
             get => m_frontBounds;
             set => m_frontBounds = value;
         }
 
-        [SerializeField] Transform m_backBounds = null;
+        [SerializeField] Transform m_backBounds = default;
         public Transform BackBounds
         {
             get => m_backBounds;

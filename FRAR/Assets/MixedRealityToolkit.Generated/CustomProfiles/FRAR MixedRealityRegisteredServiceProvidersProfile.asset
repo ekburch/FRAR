@@ -13,4 +13,11 @@ MonoBehaviour:
   m_Name: FRAR MixedRealityRegisteredServiceProvidersProfile
   m_EditorClassIdentifier: 
   isCustomProfile: 1
-  configurations: []
+  configurations:
+  - componentType:
+      reference: Microsoft.MixedReality.Toolkit.Extensions.HandPhysics.HandPhysicsService,
+        Microsoft.MixedReality.Toolkit.Extensions.HandPhysics
+    componentName: New Configuration 0
+    priority: 10
+    runtimePlatform: -1
+    configurationProfile: {fileID: 11400000, guid: 236baf35803f73342b69c842fe4afb1c, type: 2}
