@@ -10,7 +10,7 @@ using System;
 
 namespace FRAR.Utils
 {
-	public abstract class HandRailsBase : MonoBehaviour, IMixedRealityPointerHandler, IMixedRealityFocusHandler
+	public abstract class HandRailsBase : MonoBehaviour, IMixedRealityPointerHandler
     {
 		[Header("General Settings")]
 		[SerializeField]
@@ -49,6 +49,19 @@ namespace FRAR.Utils
 		[SerializeField]
 		private Color gizmoLineColor = Color.yellow;
 
+		[SerializeField]
+		private bool drawRuntimeDebugObjects = false;
+
+		[Header("Runtime debug Settings")]
+		[SerializeField]
+		private GameObject runtimeDebugObject;
+
+		[SerializeField]
+		private Material wayPointLineMaterial;
+
+		[SerializeField]
+		private float wayPointLineWidth = 0.01f;
+
 		protected int CurrentIndex { get; private set; } = 0;
 
 		protected Vector3 PointOnLine { get; private set; } =
@@ -68,9 +81,11 @@ namespace FRAR.Utils
 
 		private void OnEnable()
 		{
+			isTrackingPose = true;
 			CurrentIndex = 0;
 			WayPointLocations = wayPoints.Select(p => p.transform.position).ToList();
 			TotalLength = WayPointLocations.TotalLength();
+			DrawRuntimeDebugObjects();
 		}
 
 		void Update()
@@ -123,6 +138,7 @@ namespace FRAR.Utils
 
 		protected abstract void OnLocationUpdated();
 
+		#region Debugging
 		private void OnDrawGizmos()
 		{
 			if (!drawGizmoLines)
@@ -138,19 +154,31 @@ namespace FRAR.Utils
 			}
 		}
 
-		private void OnCollisionEnter(Collision other)
+		private void DrawRuntimeDebugObjects()
 		{
-			JointKinematicBody joint = other.gameObject.GetComponent<JointKinematicBody>();
-			if (joint == null) { return; }
-			else isTrackingPose = true;
-		}
+			if (drawRuntimeDebugObjects && runtimeDebugObject != null)
+			{
+				var lineTemplate = new GameObject("DebugLine");
+				lineTemplate.transform.parent = transform;
+				var lineRenderer = lineTemplate.AddComponent<LineRenderer>();
+				lineRenderer.useWorldSpace = true;
+				lineRenderer.startWidth = wayPointLineWidth;
+				lineRenderer.endWidth = lineRenderer.startWidth;
+				lineRenderer.material = wayPointLineMaterial;
 
-		private void OnCollisionExit(Collision other)
-		{
-			JointKinematicBody joint = other.gameObject.GetComponent<JointKinematicBody>();
-			if (joint == null) { return; }
-			else isTrackingPose = false;
+				for (var i = 0; i < WayPointLocations.Count; i++)
+				{
+					Instantiate(runtimeDebugObject, WayPointLocations[i], Quaternion.identity, transform);
+					if (i > 0)
+					{
+						var lineObject = Instantiate(lineTemplate);
+						lineObject.GetComponent<LineRenderer>().SetPositions(new[] { WayPointLocations[i - 1], WayPointLocations[i] });
+					}
+				}
+				Destroy(lineTemplate);
+			}
 		}
+		#endregion
 
 		public void OnPointerDown(MixedRealityPointerEventData eventData)
 		{
@@ -168,16 +196,6 @@ namespace FRAR.Utils
 		}
 
 		public void OnPointerClicked(MixedRealityPointerEventData eventData)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void OnFocusEnter(FocusEventData eventData)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void OnFocusExit(FocusEventData eventData)
 		{
 			throw new NotImplementedException();
 		}
