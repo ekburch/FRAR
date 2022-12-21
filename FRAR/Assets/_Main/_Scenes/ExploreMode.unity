@@ -633,6 +633,7 @@ MonoBehaviour:
     than all of the other discharge gauges.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!114 &178621765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,6 +1112,7 @@ MonoBehaviour:
     must be labled as "Pump Intake"
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!224 &288167712
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1358,6 +1360,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &324664194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324664191}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!65 &324664195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1523,6 +1543,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e1eff14c066dec9468872b0c59299ba6, type: 3}
   m_PrefabInstance: {fileID: 5354079655599538596}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &353425341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353425337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &396399013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2038,6 +2076,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cc40fcb214d178744a261a12d1ea8dbb, type: 3}
   m_PrefabInstance: {fileID: 663749137495735013}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &514176077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514176073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &517329834
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,7 +2299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &542449314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,7 +2374,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint3
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2382,6 +2438,135 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4645000753413446793, guid: e1eff14c066dec9468872b0c59299ba6, type: 3}
   m_PrefabInstance: {fileID: 5354079655599538596}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &582867689
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582867687}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &582867690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582867687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296b8474498840942857158dd0fe7494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioClip1: {fileID: 8300000, guid: 7bf68fc333838ce4ca24bc91e29be2fb, type: 3}
+  m_audioClip2: {fileID: 8300000, guid: 72d7e42cfea669745be6a3f642ac6fde, type: 3}
+  isUsingBoundsControl: 1
+--- !u!114 &582867693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582867687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &598359535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2394,9 +2579,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36981d974b5546a4cbfa0b4bfa0c0ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handleMaterial: {fileID: 0}
-  handleGrabbedMaterial: {fileID: 0}
-  handlePrefab: {fileID: 0}
+  handleMaterial: {fileID: 2100000, guid: 986558eab447a9847bbe138149edc1b4, type: 2}
+  handleGrabbedMaterial: {fileID: 2100000, guid: bf37b5eab60b288498d02fd524325d10, type: 2}
+  handlePrefab: {fileID: 3868891704370700786, guid: 969c9b04d1b1848489de0d6efe6250fc, type: 3}
   handleSize: 0.016
   colliderPadding: {x: 0.016, y: 0.016, z: 0.016}
   drawTetherWhenManipulating: 1
@@ -2410,6 +2595,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e673b48525e4dc8459633954209099aa, type: 3}
   m_PrefabInstance: {fileID: 465928357591606357}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &630129261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 630129262}
+  m_Layer: 0
+  m_Name: Waypoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &630129262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630129261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1998232484}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &632808333 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d0f7fc2389a3ec84fb87b9728e2494ac, type: 3}
@@ -2968,6 +3183,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &690809679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 690809680}
+  m_Layer: 0
+  m_Name: Waypoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &690809680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690809679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0258, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1998232484}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692049660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7151760626304753172, guid: e673b48525e4dc8459633954209099aa, type: 3}
@@ -2978,6 +3223,117 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -9186015506485647592, guid: e673b48525e4dc8459633954209099aa, type: 3}
   m_PrefabInstance: {fileID: 465928357591606357}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &692049662
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692049660}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &692049665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692049660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296b8474498840942857158dd0fe7494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_audioClip1: {fileID: 0}
+  m_audioClip2: {fileID: 0}
+  isUsingBoundsControl: 0
 --- !u!1001 &697924417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3011,7 +3367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2897044415607412869, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: m_text
-      value: 'Toggle Panel Movement
+      value: 'Engine On/Off
 
 '
       objectReference: {fileID: 0}
@@ -3033,11 +3389,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -3046,7 +3402,7 @@ PrefabInstance:
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1219219647}
+      objectReference: {fileID: 1219219644}
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -3057,7 +3413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckToToggle
+      value: OnEngineButtonPress
       objectReference: {fileID: 0}
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -3065,7 +3421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FRAR.EnableOrDisableComponent, Assembly-CSharp
+      value: FRAR.SimulationManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -3074,14 +3430,14 @@ PrefabInstance:
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 792033949}
+      objectReference: {fileID: 0}
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Behaviour, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3466374341365966204, guid: e157d31e347240046bc22a96e5cc32be, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3164,6 +3520,7 @@ MonoBehaviour:
   _inputDescription: 
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!65 &705315666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3202,6 +3559,7 @@ MonoBehaviour:
     flow only from the tank to the pump, and not back inside the tank.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!82 &792033920
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3444,6 +3802,7 @@ MonoBehaviour:
   _inputDescription: 
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!65 &842979295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3457,6 +3816,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0044081607, y: 0.0020566115, z: 0.002640763}
   m_Center: {x: 0.0035886795, y: -0.0010283216, z: -0.0008535025}
+--- !u!1 &845644955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845644956}
+  m_Layer: 0
+  m_Name: Waypoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &845644956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845644955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0385, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1998232484}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &853033530 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e2b80c0555a83c34e81e1c34801b80d5, type: 3}
@@ -3555,6 +3944,7 @@ MonoBehaviour:
     with the pump and have to stop its operation.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!65 &857006351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3605,6 +3995,7 @@ MonoBehaviour:
     must be labled as "Pump Intake"
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!114 &903382974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3689,7 +4080,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3825,7 +4216,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint2
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3837,7 +4228,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148734238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0258, z: 0}
+  m_LocalPosition: {x: 0, y: -0.0176, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 526100497}
@@ -4047,6 +4438,7 @@ MonoBehaviour:
   m_objectsToTrack:
   - {fileID: 324664191}
   - {fileID: 7812396170861625442}
+  - {fileID: 1784859929}
 --- !u!4 &1228001936 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db8f5cae074eec04c842b160fbb12831, type: 3}
@@ -4101,6 +4493,7 @@ MonoBehaviour:
   _inputDescription: I'm too grainy to determine what I am!
   _inputValue: 1
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!4 &1238973842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e2b80c0555a83c34e81e1c34801b80d5, type: 3}
@@ -4486,6 +4879,7 @@ MonoBehaviour:
     than all of the other discharge gauges.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!114 &1443703076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4758,6 +5152,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e2b80c0555a83c34e81e1c34801b80d5, type: 3}
   m_PrefabInstance: {fileID: 8304931641332676515}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1502505009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502505005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1521180482
 GameObject:
   m_ObjectHideFlags: 0
@@ -4844,11 +5256,71 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d0f7fc2389a3ec84fb87b9728e2494ac, type: 3}
   m_PrefabInstance: {fileID: 3845025376359251981}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1557627184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557627183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c38d283960a4e43882bd26efa3477b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wayPoints:
+  - {fileID: 630129261}
+  - {fileID: 690809679}
+  - {fileID: 845644955}
+  joint: 9
+  trackRightHand: 1
+  maxDistanceFromLine: 0.1
+  maxDistanceFromWayPoint: 0.02
+  trackPinch: 1
+  trackGrab: 1
+  isTrackingPose: 0
+  m_collider: {fileID: 0}
+  drawGizmoLines: 0
+  gizmoLineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  drawRuntimeDebugObjects: 0
+  runtimeDebugObject: {fileID: 0}
+  wayPointLineMaterial: {fileID: 0}
+  wayPointLineWidth: 0.01
+  onGrabStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onGrabEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  pullSFX: {fileID: 0}
+  pushSFX: {fileID: 0}
+  animator: {fileID: 1784859931}
+  animationName: LeverPull
+  animationLayer: 0
+  _grabOutline: {fileID: 1784859932}
 --- !u!4 &1557627186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d0f7fc2389a3ec84fb87b9728e2494ac, type: 3}
   m_PrefabInstance: {fileID: 3845025376359251981}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1557627188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557627183}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &1602349112 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db8f5cae074eec04c842b160fbb12831, type: 3}
@@ -5632,7 +6104,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5810565361846956824, guid: d0f7fc2389a3ec84fb87b9728e2494ac, type: 3}
   m_PrefabInstance: {fileID: 3845025376359251981}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1784859933
+--- !u!95 &1784859931
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784859929}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a40884a4b01f6b3439c732b711e25ac4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1784859932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5640,6 +6131,24 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784859929}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &1784859933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784859929}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 149fa3ae453128b41940b5caa905f8ff, type: 3}
   m_Name: 
@@ -5655,7 +6164,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784859929}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8de8ea738e499b4881e32114f0eeb25, type: 3}
   m_Name: 
@@ -5669,7 +6178,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784859929}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5afd5316c63705643b3daba5a6e923bd, type: 3}
   m_Name: 
@@ -5683,7 +6192,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784859929}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
   m_Name: 
@@ -5740,7 +6249,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784859929}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8200a044a5affb843ba856b902d9fd3c, type: 3}
   m_Name: 
@@ -5791,7 +6300,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784859929}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49eebbfcc03829f4ebed61c2617da0fc, type: 3}
   m_Name: 
@@ -5837,6 +6346,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e2b80c0555a83c34e81e1c34801b80d5, type: 3}
   m_PrefabInstance: {fileID: 562364674731409126}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1799848916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799848912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &1806652509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5862,6 +6389,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 33488b934845e464187fcdb4197ca777, type: 3}
   m_PrefabInstance: {fileID: 9150452272377588765}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1847737142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847737138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &1886723356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5923,6 +6468,7 @@ MonoBehaviour:
   _inputDescription: 
   _inputValue: 0
   _timeUntilDialogResets: 1
+  _outline: {fileID: 0}
 --- !u!65 &1961044809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6114,6 +6660,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e2b80c0555a83c34e81e1c34801b80d5, type: 3}
   m_PrefabInstance: {fileID: 2767259970595802538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1998232483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1998232484}
+  m_Layer: 0
+  m_Name: Waypoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1998232484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998232483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 630129262}
+  - {fileID: 690809680}
+  - {fileID: 845644956}
+  m_Father: {fileID: 1557627186}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2024919180
 Transform:
   m_ObjectHideFlags: 0
@@ -6410,6 +6989,7 @@ MonoBehaviour:
   _inputDescription: Where external water is fed into the truck
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!65 &109282128651904643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6730,6 +7310,7 @@ MonoBehaviour:
     coolant inside of an engine. '
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!65 &488380143016980126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7073,10 +7654,34 @@ MonoBehaviour:
   constraintsManager: {fileID: 3762271739624367236}
   rotateStarted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 692049662}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 765efbcf7ca1773488edcc8ab6ba4923, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   rotateStopped:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 692049662}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 9d90886bb6646244e852a0acb1de3a3b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   scaleStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -7941,6 +8546,7 @@ GameObject:
   - component: {fileID: 6850955002638840038}
   - component: {fileID: 6372371114090813538}
   - component: {fileID: 7042899388042558042}
+  - component: {fileID: 1996880073709783223}
   m_Layer: 0
   m_Name: Engine_Fuel
   m_TagString: Untagged
@@ -7948,6 +8554,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1996880073709783223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996880073709783222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &2018818607567257646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8046,6 +8670,7 @@ GameObject:
   - component: {fileID: 903382975}
   - component: {fileID: 903382972}
   - component: {fileID: 903382974}
+  - component: {fileID: 2159717919823050266}
   m_Layer: 0
   m_Name: Master_Intake
   m_TagString: Untagged
@@ -8053,6 +8678,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2159717919823050266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2159717919823050265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &2173800175136906475
 Transform:
   m_ObjectHideFlags: 0
@@ -8162,6 +8805,7 @@ MonoBehaviour:
     and slowly primes the pump.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 1557627188}
 --- !u!4 &2345419945150558247
 Transform:
   m_ObjectHideFlags: 0
@@ -8197,6 +8841,7 @@ MonoBehaviour:
     to the water tank.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 5860230152431044339}
 --- !u!1001 &2418075260534146383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8293,6 +8938,7 @@ MonoBehaviour:
     speed from the pump panel.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!1 &2701685663308932045
 GameObject:
   m_ObjectHideFlags: 0
@@ -8307,6 +8953,8 @@ GameObject:
   - component: {fileID: 2886550582172586101}
   - component: {fileID: 2701685663308932046}
   - component: {fileID: 2701685663308932047}
+  - component: {fileID: 2701685663308932048}
+  - component: {fileID: 2701685663308932049}
   m_Layer: 0
   m_Name: Primer
   m_TagString: Untagged
@@ -8343,9 +8991,18 @@ MonoBehaviour:
   runtimeDebugObject: {fileID: 0}
   wayPointLineMaterial: {fileID: 0}
   wayPointLineWidth: 0.01
+  onGrabStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onGrabEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  pullSFX: {fileID: 0}
+  pushSFX: {fileID: 0}
   animator: {fileID: 324664193}
   animationName: LeverPull
   animationLayer: 0
+  _grabOutline: {fileID: 324664194}
 --- !u!114 &2701685663308932047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8369,15 +9026,189 @@ MonoBehaviour:
   VoiceCommand: 
   voiceRequiresFocus: 1
   profiles:
-  - Target: {fileID: 0}
+  - Target: {fileID: 2701685663308932045}
     Themes:
-    - {fileID: 0}
+    - {fileID: 11400000, guid: 4a98c19db1c00e1448d60afcfce59472, type: 2}
   OnClick:
     m_PersistentCalls:
       m_Calls: []
-  Events: []
+  Events:
+  - Event:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2701685663308932048}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: a16c53885bdbc54469088880ea44a9fd, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    ClassName: InteractableOnGrabReceiver
+    AssemblyQualifiedName: Microsoft.MixedReality.Toolkit.UI.InteractableOnGrabReceiver,
+      Microsoft.MixedReality.Toolkit.SDK, Version=2.7.2.0, Culture=neutral, PublicKeyToken=null
+    Settings:
+    - Type: 18
+      Label: On Release
+      Name: OnRelease
+      Tooltip: Grab was released
+      IntValue: 0
+      StringValue: 
+      FloatValue: 0
+      BoolValue: 0
+      GameObjectValue: {fileID: 0}
+      ScriptableObjectValue: {fileID: 0}
+      ObjectValue: {fileID: 0}
+      MaterialValue: {fileID: 0}
+      TextureValue: {fileID: 0}
+      ColorValue: {r: 0, g: 0, b: 0, a: 0}
+      Vector2Value: {x: 0, y: 0}
+      Vector3Value: {x: 0, y: 0, z: 0}
+      Vector4Value: {x: 0, y: 0, z: 0, w: 0}
+      CurveValue:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+      AudioClipValue: {fileID: 0}
+      QuaternionValue: {x: 0, y: 0, z: 0, w: 0}
+      EventValue:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 2701685663308932048}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: PlayOneShot
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 8300000, guid: bcae4cbce6135d84b9b04ee9e5b909f4, type: 3}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      Options: []
   resetOnDestroy: 0
   enabledOnStart: 1
+--- !u!82 &2701685663308932048
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2701685663308932045}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2701685663308932049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2701685663308932045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &2767259970595802538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9016,6 +9847,7 @@ MonoBehaviour:
     of the engine.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!1001 &3845025376359251981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9109,6 +9941,7 @@ MonoBehaviour:
     in water.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!1 &4284490604335508087
 GameObject:
   m_ObjectHideFlags: 0
@@ -9210,6 +10043,7 @@ GameObject:
   - component: {fileID: 8241147964392691430}
   - component: {fileID: 2626431384871568652}
   - component: {fileID: 1474796513669280966}
+  - component: {fileID: 4472131028035511632}
   m_Layer: 0
   m_Name: Engine_Throttle
   m_TagString: Untagged
@@ -9217,6 +10051,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4472131028035511632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4472131028035511631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &4489431337720320870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9235,6 +10087,7 @@ MonoBehaviour:
   _inputDescription: It's under pressure...
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!1001 &4852706928027269412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9501,6 +10354,7 @@ GameObject:
   - component: {fileID: 5507080175120106323}
   - component: {fileID: 1961044809}
   - component: {fileID: 1961044807}
+  - component: {fileID: 5182452499824174402}
   m_Layer: 0
   m_Name: Left_Intake
   m_TagString: Untagged
@@ -9508,6 +10362,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5182452499824174402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5182452499824174401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &5258077872239533283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9784,6 +10656,7 @@ MonoBehaviour:
     drafting operations. It's not usually found on newer trucks.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 2701685663308932049}
 --- !u!114 &5769514230305792516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9802,6 +10675,7 @@ MonoBehaviour:
   _inputDescription: This gauge shows whether the pump is overheating or not.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!114 &5782026580529108354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9852,10 +10726,12 @@ GameObject:
   - component: {fileID: 7905985031146886128}
   - component: {fileID: 5355699382454855482}
   - component: {fileID: 6363681013458901772}
+  - component: {fileID: 5860230152431044338}
   - component: {fileID: 2418058788978169262}
   - component: {fileID: 6121440118312145905}
   - component: {fileID: 5860230152431044337}
   - component: {fileID: 5860230152431044336}
+  - component: {fileID: 5860230152431044339}
   m_Layer: 0
   m_Name: Tank_Fill
   m_TagString: Untagged
@@ -9919,15 +10795,162 @@ MonoBehaviour:
   trackGrab: 1
   isTrackingPose: 0
   m_collider: {fileID: 6363681013458901772}
-  drawGizmoLines: 1
+  drawGizmoLines: 0
   gizmoLineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   drawRuntimeDebugObjects: 0
-  runtimeDebugObject: {fileID: 0}
-  wayPointLineMaterial: {fileID: 0}
+  runtimeDebugObject: {fileID: 2444606035247786308, guid: c843a904764a09e46bd4a37c6bd010ae, type: 3}
+  wayPointLineMaterial: {fileID: 2100000, guid: 23fd1eedd96058843aa5fdbd9ded9bb7, type: 2}
   wayPointLineWidth: 0.01
+  onGrabStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5860230152431044338}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: a16c53885bdbc54469088880ea44a9fd, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onGrabEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5860230152431044338}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: bcae4cbce6135d84b9b04ee9e5b909f4, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  pullSFX: {fileID: 8300000, guid: 7bf68fc333838ce4ca24bc91e29be2fb, type: 3}
+  pushSFX: {fileID: 8300000, guid: 72d7e42cfea669745be6a3f642ac6fde, type: 3}
   animator: {fileID: 7812396170861625443}
   animationName: LeverPull
   animationLayer: 0
+  _grabOutline: {fileID: 7812396170861625444}
+--- !u!82 &5860230152431044338
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5860230152431044335}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &5860230152431044339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5860230152431044335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &5894082098856025292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9985,6 +11008,7 @@ MonoBehaviour:
     an idea about the battery's condition.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!114 &6121440118312145905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10077,6 +11101,7 @@ GameObject:
   - component: {fileID: 178621762}
   - component: {fileID: 178621763}
   - component: {fileID: 178621765}
+  - component: {fileID: 6179610819271923016}
   m_Layer: 0
   m_Name: Master_Discharge
   m_TagString: Untagged
@@ -10084,6 +11109,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6179610819271923016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6179610819271923015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &6179650012115621715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10319,6 +11362,7 @@ GameObject:
   - component: {fileID: 6989179025511034274}
   - component: {fileID: 705315666}
   - component: {fileID: 705315665}
+  - component: {fileID: 6367095580031387326}
   m_Layer: 0
   m_Name: Discharge2
   m_TagString: Untagged
@@ -10326,6 +11370,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6367095580031387326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6367095580031387325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &6372371114090813538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10344,6 +11406,7 @@ MonoBehaviour:
   _inputDescription: This shows how much fuel is in the fuel tank.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!4 &6386309086240229787
 Transform:
   m_ObjectHideFlags: 0
@@ -10542,6 +11605,7 @@ MonoBehaviour:
     one-quarter increments.
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!1 &6655464435110189762
 GameObject:
   m_ObjectHideFlags: 0
@@ -10553,6 +11617,7 @@ GameObject:
   - component: {fileID: 5078918522255834402}
   - component: {fileID: 842979295}
   - component: {fileID: 842979294}
+  - component: {fileID: 6655464435110189763}
   m_Layer: 0
   m_Name: Discharge1
   m_TagString: Untagged
@@ -10560,6 +11625,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6655464435110189763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6655464435110189762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &6779461839664120852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10626,7 +11709,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557627183}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.03438483, y: 0.028255073, z: 0.019615712}
@@ -10685,6 +11768,7 @@ GameObject:
   - component: {fileID: 600356170853662877}
   - component: {fileID: 487767070262022820}
   - component: {fileID: 7935148972169587688}
+  - component: {fileID: 7019317364236422789}
   m_Layer: 0
   m_Name: Engine_Coolant
   m_TagString: Untagged
@@ -10692,6 +11776,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7019317364236422789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7019317364236422788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &7025929124637778066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10849,6 +11951,7 @@ GameObject:
   - component: {fileID: 109282128651904643}
   - component: {fileID: 5769514230305792516}
   - component: {fileID: 6402489270458139744}
+  - component: {fileID: 7104315210204285746}
   m_Layer: 0
   m_Name: Water_Temp
   m_TagString: Untagged
@@ -10856,6 +11959,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7104315210204285746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7104315210204285745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &7296086043773431595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11049,10 +12170,46 @@ MonoBehaviour:
   constraintsManager: {fileID: 6407192425609477319}
   rotateStarted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 582867689}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 765efbcf7ca1773488edcc8ab6ba4923, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 582867690}
+        m_TargetAssemblyTypeName: FRAR.ManipulationEvents, Assembly-CSharp
+        m_MethodName: RotationEvents
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   rotateStopped:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 582867689}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 9d90886bb6646244e852a0acb1de3a3b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   scaleStarted:
     m_PersistentCalls:
       m_Calls: []
@@ -11760,6 +12917,7 @@ GameObject:
   - component: {fileID: 6944898252517519353}
   - component: {fileID: 6172552232694863919}
   - component: {fileID: 7812396170861625443}
+  - component: {fileID: 7812396170861625444}
   m_Layer: 0
   m_Name: Pull_1
   m_TagString: Untagged
@@ -11786,6 +12944,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7812396170861625444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812396170861625442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &7827144191449744033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12066,6 +13242,7 @@ MonoBehaviour:
     known as the engine's revolutions per minute (RPM).
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}
 --- !u!1001 &8192697683677795996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12237,6 +13414,7 @@ GameObject:
   - component: {fileID: 2068888083145942821}
   - component: {fileID: 3840227122688482584}
   - component: {fileID: 5782026580529108354}
+  - component: {fileID: 8367498161497445966}
   m_Layer: 0
   m_Name: Oil_Pressure
   m_TagString: Untagged
@@ -12244,6 +13422,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8367498161497445966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8367498161497445965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.40000004, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &8400884857495107766
 GameObject:
   m_ObjectHideFlags: 0
@@ -12704,3 +13900,4 @@ MonoBehaviour:
   _inputDescription: Where external water is fed into the truck
   _inputValue: 0
   _timeUntilDialogResets: 2
+  _outline: {fileID: 0}

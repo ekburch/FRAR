@@ -41,5 +41,17 @@ namespace FRAR
                 Debug.Log(entry.Key + ", " + entry.Value);
             }
         }
+
+        public void SetStartingValues()
+        {
+
+        }
+
+        public void OnEngineButtonPress()
+        {
+            SetStartingValues();
+            var soundManager = SoundManager.Instance;
+            soundManager.IsPlayingScheduled = !soundManager.IsPlayingScheduled;
+        }
     }
 }

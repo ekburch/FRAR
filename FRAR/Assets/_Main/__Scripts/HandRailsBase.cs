@@ -7,10 +7,11 @@ using UnityEngine;
 using Unity.XR.CoreUtils;
 using Microsoft.MixedReality.Toolkit.Extensions.HandPhysics;
 using System;
+using UnityEngine.Events;
 
 namespace FRAR.Utils
 {
-	public abstract class HandRailsBase : MonoBehaviour, IMixedRealityPointerHandler
+	public abstract class HandRailsBase : MonoBehaviour, IMixedRealityPointerHandler, IMixedRealityFocusHandler
     {
 		[Header("General Settings")]
 		[SerializeField]
@@ -77,7 +78,33 @@ namespace FRAR.Utils
 				(handJointService =
 				  CoreServices.GetInputSystemDataProvider<IMixedRealityHandJointService>());
 		
-		private IMixedRealityPointer Pointer { get; set; }
+		public IMixedRealityPointer currentPointer { get; set; }
+
+		[SerializeField]
+		private UnityEvent onGrabStart = new UnityEvent();
+		public UnityEvent OnGrabStart
+		{
+			get => onGrabStart;
+			set => onGrabStart = value;
+		}
+
+		[SerializeField]
+		private UnityEvent onGrabEnd = new UnityEvent();
+		public UnityEvent OnGrabEnd
+		{
+			get => onGrabEnd;
+			set => onGrabEnd = value;
+		}
+
+		private AudioSource audioSource { get; set; }
+		[SerializeField] AudioClip pullSFX, pushSFX;
+
+		protected virtual void Awake() { }
+
+		private void Start()
+		{
+			audioSource = GetComponent<AudioSource>();
+		}
 
 		private void OnEnable()
 		{
@@ -95,7 +122,7 @@ namespace FRAR.Utils
 				var trackedHand = trackRightHand ? Handedness.Right : Handedness.Left;
 				if (HandJointService.IsHandTracked(trackedHand) &&
 					((GestureUtils.IsPinching(trackedHand) && trackPinch) ||
-						(GestureUtils.IsGrabbing(trackedHand) && trackGrab)))
+					(GestureUtils.IsGrabbing(trackedHand) && trackGrab)))
 				{
 					var jointPosition = HandJointService.RequestJointTransform(joint, trackedHand).position;
 
@@ -110,6 +137,7 @@ namespace FRAR.Utils
 					var closestIndex = jointPosition.GetClosestLineSegmentIndex(WayPointLocations);
 					if (closestIndex != CurrentIndex)
 					{
+						AudioClip clip = null;
 						// Can we jump a segment forward?
 						if (closestIndex == CurrentIndex + 1)
 						{
@@ -118,6 +146,7 @@ namespace FRAR.Utils
 							{
 								CurrentIndex++;
 								PointOnLine = jointPosition.GetClosestPointOnLineSegment(WayPointLocations, CurrentIndex);
+								clip = pullSFX;
 							}
 						}
 						// If not, can we jump a segment backwards?
@@ -128,8 +157,10 @@ namespace FRAR.Utils
 							{
 								CurrentIndex--;
 								PointOnLine = jointPosition.GetClosestPointOnLineSegment(WayPointLocations, CurrentIndex);
+								clip = pushSFX;
 							}
 						}
+						audioSource.PlayOneShot(clip);
 					}
 					OnLocationUpdated();
 				}
@@ -182,22 +213,32 @@ namespace FRAR.Utils
 
 		public void OnPointerDown(MixedRealityPointerEventData eventData)
 		{
-			throw new NotImplementedException();
+			if (currentPointer == null && !eventData.used)
+			{
+				OnGrabStart?.Invoke();
+				eventData.Use();
+			}
+
+			if (currentPointer != null)
+			{
+				eventData.Use();
+			}
 		}
 
-		public void OnPointerDragged(MixedRealityPointerEventData eventData)
-		{
-			throw new NotImplementedException();
-		}
+		public void OnPointerDragged(MixedRealityPointerEventData eventData) { }
 
 		public void OnPointerUp(MixedRealityPointerEventData eventData)
 		{
-			throw new NotImplementedException();
+			if (currentPointer != null && eventData.Pointer == currentPointer)
+			{
+				OnGrabEnd?.Invoke();
+				eventData.Use();
+			}
 		}
 
-		public void OnPointerClicked(MixedRealityPointerEventData eventData)
-		{
-			throw new NotImplementedException();
-		}
+		public void OnPointerClicked(MixedRealityPointerEventData eventData) { }
+
+		public abstract void OnFocusEnter(FocusEventData eventData);
+		public abstract void OnFocusExit(FocusEventData eventData);
 	}
 }

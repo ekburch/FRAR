@@ -29,11 +29,22 @@ namespace FRAR
         public int InputValue => _inputValue;
         public float TimeUntilDialogResets => _timeUntilDialogResets;
 
+        [SerializeField]
+        private Outline _outline;
+        public Outline Outline => _outline;
+
+        public void Start()
+        {
+            _outline = GetComponent<Outline>();
+            _outline.enabled = false;
+        }
+
         public void OnFocusEnter(FocusEventData eventData)
         {
             OnInputEventTriggered?.Invoke(this);
             descriptionsController?.UpdateText(InputName, InputDescription, transform, true);
             OnFocusEntered?.Invoke(eventData);
+            Toggle();
             //hintsController.DescriptionToggle();
         }
 
@@ -42,7 +53,13 @@ namespace FRAR
             //StartCoroutine(descriptionsController.ResetText(TimeUntilDialogResets));
             descriptionsController?.UpdateText("", "", null, false);
             OnFocusExited?.Invoke(eventData);
+            Toggle();
             //hintsController.DescriptionToggle();
+        }
+
+        public void Toggle()
+        {
+            _outline.enabled = !_outline.enabled;
         }
     }
 }

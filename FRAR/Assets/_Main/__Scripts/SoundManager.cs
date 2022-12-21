@@ -14,6 +14,8 @@ namespace FRAR
         [SerializeField] AudioSource m_audioSource0 = default;
         [SerializeField] AudioSource m_audioSource1 = default;
         [SerializeField] AudioSource m_sfxSource = default;
+        [SerializeField] AudioSource m_sfxLoopSource = default;
+        [SerializeField] AudioSource[] m_sfxSources = default;
 
         public AudioClip m_mainMenuMusic = default;
         public AudioClip m_quizMenuMusic = default;
@@ -21,10 +23,20 @@ namespace FRAR
         public AudioClip m_incorrectSFX = default;
         public AudioClip[] m_inGameMusic = default;
 
+        public AudioClip[] m_engineSFX = default;
+        public AudioClip m_engineStartSFX = default;
+        public AudioClip m_engineLoopSFX = default;
+        public AudioClip m_engineStopSFX = default;
+
         [SerializeField] bool m_isLooping;
         public bool IsLooping { get => m_isLooping; private set => m_isLooping = value; }
 
         bool isCurrentSource = true;
+
+        private double nextClipTime;
+        private int toggle = 0;
+        [SerializeField] bool m_isPlayingScheduled;
+        public bool IsPlayingScheduled { get => m_isPlayingScheduled; set => m_isPlayingScheduled = value; }
 
         Coroutine _currSourceFadeRoutine = null;
         Coroutine _newSourceFadeRoutine = null;
@@ -50,8 +62,9 @@ namespace FRAR
         {
             m_currentTrackIndex = Random.Range(0, m_inGameMusic.Length);
             PlayLooping(m_mainMenuMusic, true);
+            nextClipTime = AudioSettings.dspTime + 2.0f;
 			//ChangeMusic(1);
-        }
+		}
 
         private void Update()
         {
@@ -62,12 +75,16 @@ namespace FRAR
                 if (!IsLooping)
                 {
                     m_currentTrackIndex++;
-                    if (m_currentTrackIndex >= m_inGameMusic.Length)
+                    if (m_currentTrackIndex > m_inGameMusic.Length)
                         m_currentTrackIndex = 0;
                     AudioClip newClip = m_inGameMusic[m_currentTrackIndex];
                     CrossFadeAudio(newClip, 1f, .25f, 0f);
                 }
 			}
+            if (!m_isPlayingScheduled)
+                return;
+            else
+                PlayScheduled();
 		}
 
         public void PlayLooping(AudioClip clip, bool isLooping)
@@ -89,6 +106,20 @@ namespace FRAR
             m_sfxSource.clip = clip;
             m_sfxSource.volume = 1;
             m_sfxSource.Play();
+        }
+
+        public void PlayScheduled()
+        {
+            double time = AudioSettings.dspTime;
+
+            if (time + 1f > nextClipTime)
+            {
+                m_sfxSources[toggle].clip = m_engineSFX[toggle];
+                m_sfxSources[toggle].PlayScheduled(nextClipTime);
+
+                nextClipTime += m_engineSFX[toggle].length;
+                toggle = 1 - toggle;
+            }
         }
 
         public void ChangeMusic(int track)
