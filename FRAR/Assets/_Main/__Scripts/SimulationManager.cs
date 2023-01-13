@@ -11,6 +11,7 @@ namespace FRAR
     {
         public static SimulationManager Instance = null;
         public Dictionary<string, int> panelComponents = new Dictionary<string, int>();
+        public GameObject[] visualComponentsGO;
 
         private void Awake()
         {
@@ -30,6 +31,10 @@ namespace FRAR
         {
             panelComponents.Clear();
             InputEvents.OnInputEventTriggered += OnPanelEventsTriggered;
+            foreach(var component in visualComponentsGO)
+            {
+                component.SetActive(false);
+            }
         }
 
         private void OnPanelEventsTriggered(InputEvents inputEvent)
@@ -51,7 +56,13 @@ namespace FRAR
         {
             SetStartingValues();
             var soundManager = SoundManager.Instance;
-            soundManager.IsPlayingScheduled = !soundManager.IsPlayingScheduled;
+            if (soundManager != null)
+                soundManager.IsPlayingScheduled = !soundManager.IsPlayingScheduled;
+
+            foreach (GameObject go in visualComponentsGO)
+            {
+                go.SetActive(!go.activeSelf);
+            }
         }
     }
 }

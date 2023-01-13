@@ -44,6 +44,7 @@ namespace FRAR
 				animator.Play(animationName, animationLayer);
 			}
 			animator.SetFloat(MotionTime, traveledFraction);
+			DisableOutline();
 		}
 
 		private void OnTriggerEnter(Collider other)
@@ -72,11 +73,7 @@ namespace FRAR
 				IsTrackingPose = false;
 				if (_grabOutline != null)
 				{
-					_grabOutline.OutlineWidth = 2f;
-					_grabOutline.UpdateMaterialProperties();
-					highLightTween.Pause();
-					highLightTween.Rewind();
-					_grabOutline.enabled = false; 
+					DisableOutline();
 				}
 				HandAnimatorManager.instance?.ActivateAnimatorByName(animator.name.ToString(), false);
 			}
@@ -93,6 +90,18 @@ namespace FRAR
 			if (currentPointer != null && eventData.Pointer == currentPointer)
 			{
 				currentPointer = null;
+			}
+		}
+
+		void DisableOutline()
+		{
+			if (_grabOutline != null)
+			{
+				_grabOutline.enabled = false;
+				_grabOutline.OutlineWidth = 2f;
+				_grabOutline.UpdateMaterialProperties();
+				highLightTween.Pause();
+				highLightTween.Rewind();
 			}
 		}
 	}

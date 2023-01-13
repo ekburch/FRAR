@@ -17,6 +17,7 @@ namespace FRAR
 		[SerializeField] AudioClip m_audioClip1;
 		[SerializeField] AudioClip m_audioClip2;
 		[SerializeField] bool isUsingBoundsControl = false;
+		[SerializeField] NeedleController needleController;
 
 		private IMixedRealityPointer currentPointer;
 
@@ -53,6 +54,9 @@ namespace FRAR
 			Quaternion goal = Quaternion.FromToRotation(initDir, currentDir) * initialRotationOnGrabStart;
 
 			bool isClockwise = GetRotationDirection(initRotation, goal);
+			var amountToMoveNeedle = isClockwise ? 1 : 2;
+			needleController?.HandleUserInput(amountToMoveNeedle);
+
 			AudioClip clip = isClockwise ? m_audioClip1 : m_audioClip2;
 			m_audioSource.PlayOneShot(clip);
 		}
