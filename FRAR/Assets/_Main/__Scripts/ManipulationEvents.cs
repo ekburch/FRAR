@@ -19,6 +19,8 @@ namespace FRAR
 		[SerializeField] bool isUsingBoundsControl = false;
 		[SerializeField] NeedleController needleController;
 
+		public bool isGrabbed = false;
+
 		private IMixedRealityPointer currentPointer;
 
 		private Outline outline;
@@ -39,10 +41,15 @@ namespace FRAR
 
 		}
 
+		public void SetGrabbed(bool _isGrabbed)
+		{
+			isGrabbed = _isGrabbed;
+		}
+
 		// Update is called once per frame
 		void Update()
 		{
-
+			if (isGrabbed) RotationEvents();
 		}
 
 		public void RotationEvents()
@@ -54,7 +61,7 @@ namespace FRAR
 			Quaternion goal = Quaternion.FromToRotation(initDir, currentDir) * initialRotationOnGrabStart;
 
 			bool isClockwise = GetRotationDirection(initRotation, goal);
-			var amountToMoveNeedle = isClockwise ? 1 : 2;
+			var amountToMoveNeedle = isClockwise ? 2 : 1;
 			needleController?.HandleUserInput(amountToMoveNeedle);
 
 			AudioClip clip = isClockwise ? m_audioClip1 : m_audioClip2;
@@ -95,10 +102,10 @@ namespace FRAR
 		{
 			if (outline != null)
 			{
+				outline.enabled = false;
 				outline.OutlineWidth = 2f;
 				outline.UpdateMaterialProperties();
 				highLightTween.Pause();
-				outline.enabled = false;
 			}
 
 			if (currentPointer != null && eventData.Pointer == currentPointer)

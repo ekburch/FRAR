@@ -6,42 +6,17 @@ namespace FRAR
 {
     public class NeedleController : MonoBehaviour
     {
-        private const float MAX_METER_ANGLE = -20;
-        private const float MIN_METER_ANGLE = 210;
+		// Done because the model is weird and has weird angles
+		// And the project is too dependent
+		[Header("Set in inspector for each gauge")]
+		[SerializeField] private const float MAX_METER_ANGLE = -133;
+		[SerializeField] private const float MIN_METER_ANGLE = 133;
 
         public GameObject m_needle = default;
 
-		[Header("Set in inspector for each gauge")]
+        [Header("Update as needed")]
+        [SerializeField] private float needleSpeed = 100f;
 		[SerializeField] private float currentValue = 0f;
-        [SerializeField] private float maxValue = 200f;
-
-        [Header("Set in inspector")]
-        [SerializeField]
-        private float needleSpeed = 100f;
-		[SerializeField]
-		private float minGaugeValue = 0f;
-		[SerializeField]
-        private float maxGaugeValue = 210f;
-
-        // Update is called once per frame
-        void Update()
-        {
-            if (currentValue > maxValue)
-                currentValue = maxValue;
-        }
-
-        private float GetNeedleRotation()
-        {
-            float totalAngleSize = MIN_METER_ANGLE - MAX_METER_ANGLE;
-            float needleSpeedNormalized = currentValue / maxValue;
-
-            return MIN_METER_ANGLE - needleSpeedNormalized * totalAngleSize;
-        }
-
-        public void SetTargetValue(float value)
-        {
-            maxValue = value;
-        }
 
         public void HandleUserInput(int amount)
         {
@@ -49,12 +24,12 @@ namespace FRAR
             switch(amount)
             {
                 case 1:
-                    needleSpeed = 50f;
-                    currentValue += needleSpeed * Time.deltaTime;
+                    needleSpeed = 20f;
+                    currentValue -= needleSpeed * Time.deltaTime;
                     break;
                 case 2:
                     needleSpeed = 20f;
-                    currentValue -= needleSpeed * Time.deltaTime;
+                    currentValue += needleSpeed * Time.deltaTime;
                     break;
                 default:
                     needleSpeed = 0f;
@@ -65,25 +40,15 @@ namespace FRAR
             SetNeedleRotation();
         }
 
-        public void UpdateValues()
-        {
-            if (maxValue > currentValue)
-            {
-                currentValue += needleSpeed * Time.deltaTime;
-                currentValue = Mathf.Clamp(currentValue, minGaugeValue, maxValue);
-            }
-            else if (maxValue < currentValue)
-            {
-                currentValue -= needleSpeed * Time.deltaTime;
-                currentValue = Mathf.Clamp(currentValue, maxValue, maxGaugeValue);
-            }
-
-            SetNeedleRotation();
-        }
-
         public void SetNeedleRotation()
         {
-            m_needle.transform.localEulerAngles = new Vector3(0, 0, GetNeedleRotation());
+            m_needle.transform.localEulerAngles = new Vector3(0, GetNeedleRotation(), 0);
         }
-    }
+
+		private float GetNeedleRotation()
+		{
+            currentValue = Mathf.Clamp(currentValue, MAX_METER_ANGLE, MIN_METER_ANGLE);
+            return currentValue;
+		}
+	}
 }

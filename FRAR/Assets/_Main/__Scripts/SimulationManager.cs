@@ -43,7 +43,7 @@ namespace FRAR
 
             foreach(KeyValuePair<string, int> entry in panelComponents)
             {
-                Debug.Log(entry.Key + ", " + entry.Value);
+                //Debug.Log(entry.Key + ", " + entry.Value);
             }
         }
 
