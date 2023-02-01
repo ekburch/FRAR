@@ -11,7 +11,7 @@ using UnityEngine.Events;
 
 namespace FRAR.Utils
 {
-	public abstract class HandRailsBase : MonoBehaviour, IMixedRealityPointerHandler, IMixedRealityFocusHandler
+	public abstract class HandRailsBase : MonoBehaviour, IMixedRealityFocusHandler
     {
 		[Header("General Settings")]
 		[SerializeField]
@@ -108,7 +108,7 @@ namespace FRAR.Utils
 
 		private void OnEnable()
 		{
-			isTrackingPose = true;
+			//isTrackingPose = true;
 			CurrentIndex = 0;
 			WayPointLocations = wayPoints.Select(p => p.transform.position).ToList();
 			TotalLength = WayPointLocations.TotalLength();
@@ -137,7 +137,6 @@ namespace FRAR.Utils
 					var closestIndex = jointPosition.GetClosestLineSegmentIndex(WayPointLocations);
 					if (closestIndex != CurrentIndex)
 					{
-						AudioClip clip = null;
 						// Can we jump a segment forward?
 						if (closestIndex == CurrentIndex + 1)
 						{
@@ -146,7 +145,7 @@ namespace FRAR.Utils
 							{
 								CurrentIndex++;
 								PointOnLine = jointPosition.GetClosestPointOnLineSegment(WayPointLocations, CurrentIndex);
-								clip = pullSFX;
+								audioSource.PlayOneShot(pullSFX);
 							}
 						}
 						// If not, can we jump a segment backwards?
@@ -157,10 +156,9 @@ namespace FRAR.Utils
 							{
 								CurrentIndex--;
 								PointOnLine = jointPosition.GetClosestPointOnLineSegment(WayPointLocations, CurrentIndex);
-								clip = pushSFX;
+								audioSource.PlayOneShot(pushSFX);
 							}
 						}
-						audioSource.PlayOneShot(clip);
 					}
 					OnLocationUpdated();
 				}
@@ -211,32 +209,32 @@ namespace FRAR.Utils
 		}
 		#endregion
 
-		public void OnPointerDown(MixedRealityPointerEventData eventData)
-		{
-			if (currentPointer == null && !eventData.used)
-			{
-				OnGrabStart?.Invoke();
-				eventData.Use();
-			}
-
-			if (currentPointer != null)
-			{
-				eventData.Use();
-			}
-		}
-
-		public void OnPointerDragged(MixedRealityPointerEventData eventData) { }
-
-		public void OnPointerUp(MixedRealityPointerEventData eventData)
-		{
-			if (currentPointer != null && eventData.Pointer == currentPointer)
-			{
-				OnGrabEnd?.Invoke();
-				eventData.Use();
-			}
-		}
-
-		public void OnPointerClicked(MixedRealityPointerEventData eventData) { }
+		//public void OnPointerDown(MixedRealityPointerEventData eventData)
+		//{
+		//	if (currentPointer == null && !eventData.used)
+		//	{
+		//		OnGrabStart?.Invoke();
+		//		eventData.Use();
+		//	}
+		//
+		//	if (currentPointer != null)
+		//	{
+		//		eventData.Use();
+		//	}
+		//}
+		//
+		//public void OnPointerDragged(MixedRealityPointerEventData eventData) { }
+		//
+		//public void OnPointerUp(MixedRealityPointerEventData eventData)
+		//{
+		//	if (currentPointer != null && eventData.Pointer == currentPointer)
+		//	{
+		//		OnGrabEnd?.Invoke();
+		//		eventData.Use();
+		//	}
+		//}
+		//
+		//public void OnPointerClicked(MixedRealityPointerEventData eventData) { }
 
 		public abstract void OnFocusEnter(FocusEventData eventData);
 		public abstract void OnFocusExit(FocusEventData eventData);

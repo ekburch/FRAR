@@ -9,8 +9,8 @@ namespace FRAR
 		// Done because the model is weird and has weird angles
 		// And the project is too dependent
 		[Header("Set in inspector for each gauge")]
-		[SerializeField] private const float MAX_METER_ANGLE = -133;
-		[SerializeField] private const float MIN_METER_ANGLE = 133;
+		[SerializeField] private float MAX_METER_ANGLE = -133;
+		[SerializeField] private float MIN_METER_ANGLE = 133;
 
         public GameObject m_needle = default;
 
@@ -18,17 +18,26 @@ namespace FRAR
         [SerializeField] private float needleSpeed = 100f;
 		[SerializeField] private float currentValue = 0f;
 
+        float initialNeedleSpeedValue;
+
+        private void Awake()
+        {
+            currentValue = MIN_METER_ANGLE;
+            initialNeedleSpeedValue = needleSpeed;
+            SetNeedleRotation();
+        }
+
         public void HandleUserInput(int amount)
         {
             float gaugeValue = currentValue;
             switch(amount)
             {
                 case 1:
-                    needleSpeed = 20f;
+                    needleSpeed = initialNeedleSpeedValue;
                     currentValue -= needleSpeed * Time.deltaTime;
                     break;
                 case 2:
-                    needleSpeed = 20f;
+                    needleSpeed = initialNeedleSpeedValue;
                     currentValue += needleSpeed * Time.deltaTime;
                     break;
                 default:

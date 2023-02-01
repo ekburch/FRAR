@@ -12,6 +12,10 @@ namespace FRAR
         public static SimulationManager Instance = null;
         public Dictionary<string, int> panelComponents = new Dictionary<string, int>();
         public GameObject[] visualComponentsGO;
+        public NeedleController[] needleControllers;
+        [Tooltip("Temporary - will remove")]
+        public NeedleController tachometer;
+        public bool m_engineActive = false;
 
         private void Awake()
         {
@@ -46,22 +50,40 @@ namespace FRAR
                 //Debug.Log(entry.Key + ", " + entry.Value);
             }
         }
-
-        public void SetStartingValues()
+        private void Update()
         {
-
-        }
+            int amount = m_engineActive ? 1 : 2;
+			SimpleEngineComponentBehaviors(amount);
+            if (!m_engineActive) tachometer.HandleUserInput(amount);
+		}
 
         public void OnEngineButtonPress()
         {
-            SetStartingValues();
             var soundManager = SoundManager.Instance;
-            if (soundManager != null)
-                soundManager.IsPlayingScheduled = !soundManager.IsPlayingScheduled;
+
+            if (!m_engineActive)
+            {
+                m_engineActive = true;
+				if (soundManager != null) soundManager.StartCoroutine("PlayEngineSounds");
+            }
+            else
+            {
+                m_engineActive = false;
+				if (soundManager != null) soundManager.StopEngineSounds();
+            }
+               //m_engineActive = !m_engineActive;
 
             foreach (GameObject go in visualComponentsGO)
             {
                 go.SetActive(!go.activeSelf);
+            }
+        }
+
+        private void SimpleEngineComponentBehaviors(int value)
+        {
+            foreach(var needleController in needleControllers)
+            {
+                needleController.HandleUserInput(value);
             }
         }
     }

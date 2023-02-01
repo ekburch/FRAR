@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,7 +16,8 @@ namespace FRAR
         [SerializeField] AudioSource m_audioSource1 = default;
         [SerializeField] AudioSource m_sfxSource = default;
         [SerializeField] AudioSource m_sfxLoopSource = default;
-        [SerializeField] AudioSource[] m_sfxSources = default;
+        public AudioSource[] m_sfxSources = default;
+        public AudioSource[] m_musicSources = default;
 
         public AudioClip m_mainMenuMusic = default;
         public AudioClip m_quizMenuMusic = default;
@@ -34,7 +36,9 @@ namespace FRAR
         bool isCurrentSource = true;
 
         private double nextClipTime;
-        private int toggle = 0;
+        private int nextClipIndex = 0;
+        // For swapping between AudioSources
+        private int toggle = 0; 
         [SerializeField] bool m_isPlayingScheduled;
         public bool IsPlayingScheduled { get => m_isPlayingScheduled; set => m_isPlayingScheduled = value; }
 
@@ -61,8 +65,11 @@ namespace FRAR
         private void Start()
         {
             m_currentTrackIndex = Random.Range(0, m_inGameMusic.Length);
-            PlayLooping(m_mainMenuMusic, true);
-            nextClipTime = AudioSettings.dspTime + 2.0f;
+            if (SceneManager.GetActiveScene().name == "MainMenu")
+            {
+                PlayLooping(m_mainMenuMusic, true);
+            }
+            nextClipTime = AudioSettings.dspTime + 1f;
 			//ChangeMusic(1);
 		}
 
@@ -74,18 +81,42 @@ namespace FRAR
             {
                 if (!IsLooping)
                 {
-                    m_currentTrackIndex++;
-                    if (m_currentTrackIndex > m_inGameMusic.Length)
-                        m_currentTrackIndex = 0;
+                    m_currentTrackIndex = m_currentTrackIndex < m_inGameMusic.Length - 1 ? m_currentTrackIndex + 1 : 0;
                     AudioClip newClip = m_inGameMusic[m_currentTrackIndex];
                     CrossFadeAudio(newClip, 1f, .25f, 0f);
                 }
 			}
-            if (!m_isPlayingScheduled)
-                return;
+			
+            AudioSource[] sources = null;
+			AudioClip[] clips = null;
+            
+            if (m_isPlayingScheduled)
+            {
+                switch (SceneManager.GetActiveScene().name)
+                {
+                    case "ExploreMode":
+                    case "SingleLine":
+                        sources = m_sfxSources;
+                        clips = m_engineSFX;
+                        break;
+                    case "ChallengeMode":
+                        sources = m_musicSources;
+                        clips = m_inGameMusic;
+                        break;
+                }
+                PlayScheduled(sources, clips);
+            }
             else
-                PlayScheduled();
-		}
+            {
+                if (sources != null && sources == m_sfxSources)
+                {
+                    for (int i = 0; i < sources.Length; i++)
+                    {
+                        sources[i].Stop();
+                    }
+                }
+            }
+        }
 
         public void PlayLooping(AudioClip clip, bool isLooping)
         {
@@ -108,21 +139,53 @@ namespace FRAR
             m_sfxSource.Play();
         }
 
-        public void PlayScheduled()
+        public void PlayScheduled(AudioSource[] audioSources, AudioClip[] audioClips)
         {
             double time = AudioSettings.dspTime;
 
-            if (time + 1f > nextClipTime)
+            if (time > nextClipTime - 1)
             {
-                m_sfxSources[toggle].clip = m_engineSFX[toggle];
-                m_sfxSources[toggle].PlayScheduled(nextClipTime);
+                AudioClip clip = audioClips[nextClipIndex];
+                audioSources[toggle].clip = clip;
+                audioSources[toggle].loop = audioSources[toggle].clip.name == "engine_idling";
+                audioSources[toggle].PlayScheduled(nextClipTime);
 
-                nextClipTime += m_engineSFX[toggle].length;
+                //nextClipTime += audioClips[toggle].length;
+                double duration = (double)clip.samples / clip.frequency;
+                nextClipTime = nextClipTime + duration;
                 toggle = 1 - toggle;
+                nextClipIndex = nextClipIndex < audioClips.Length - 1 ? nextClipIndex + 1 : 0;
             }
         }
 
-        public void ChangeMusic(int track)
+		#region Engine SFX
+        /// <summary>
+        /// Including this to temporarily test out engine sounds
+        /// Down the line will swap out
+        /// </summary>
+        /// <param name="track"></param>
+        public IEnumerator PlayEngineSounds()
+        {
+            //double startTime = AudioSettings.dspTime + 0.2f;
+            m_sfxLoopSource.PlayOneShot(m_engineStartSFX);
+            yield return new WaitForSeconds(m_engineStartSFX.samples / m_engineStartSFX.frequency);
+			m_sfxLoopSource.clip = m_engineLoopSFX;
+			m_sfxLoopSource.loop = true;
+			m_sfxLoopSource.Play();
+            //m_sfxSource.PlayScheduled(AudioSettings.dspTime + m_engineStartSFX.length);
+        }
+
+        public void StopEngineSounds()
+        {
+			m_sfxLoopSource.loop = false;
+			m_sfxLoopSource.clip = m_engineStopSFX;
+            m_sfxLoopSource.PlayOneShot(m_engineStopSFX);
+            //m_sfxSource.Stop();
+        }
+
+		#endregion
+
+		public void ChangeMusic(int track)
         {
             AudioClip clip = null;
 			switch (track)
@@ -140,6 +203,8 @@ namespace FRAR
 					clip = m_inGameMusic[m_currentTrackIndex];
 					break;
 				default:
+                    IsLooping = false;
+                    clip = null;
 					break;
 				}
 			CrossFadeAudio(clip, 1f, 0.25f, 0f);

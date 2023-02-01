@@ -15,14 +15,14 @@ namespace FRAR
         [SerializeField] private GameObject[] panelComponents = default;
         [SerializeField] private GameObject descriptionPanel = default;
 
-        private bool isLabelsEnabled;
+        [SerializeField] private bool isLabelsEnabled;
         public bool IsLabelsEnabled { set => isLabelsEnabled = value; }
 
         private void Start()
         {
             if (toggleEvent == null)
                 toggleEvent = new UnityEvent();
-            toggleEvent.AddListener(LabelToggle);
+            //toggleEvent.AddListener(LabelToggle);
             //descriptionPanel = ObjectPool.SharedInstance.GetPooledObject();
             Toggle();
             DescriptionToggle();
