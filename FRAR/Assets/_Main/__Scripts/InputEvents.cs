@@ -44,7 +44,7 @@ namespace FRAR
             OnInputEventTriggered?.Invoke(this);
             descriptionsController?.UpdateText(InputName, InputDescription, transform, true);
             OnFocusEntered?.Invoke(eventData);
-            Toggle();
+            //Toggle();
             //hintsController.DescriptionToggle();
         }
 
@@ -53,13 +53,13 @@ namespace FRAR
             //StartCoroutine(descriptionsController.ResetText(TimeUntilDialogResets));
             descriptionsController?.UpdateText("", "", null, false);
             OnFocusExited?.Invoke(eventData);
-            Toggle();
+            //Toggle();
             //hintsController.DescriptionToggle();
         }
 
         public void Toggle()
         {
-            _outline.enabled = !_outline.enabled;
+            //_outline.enabled = !_outline.enabled;
         }
     }
 }

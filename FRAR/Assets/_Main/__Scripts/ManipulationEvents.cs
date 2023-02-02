@@ -241,17 +241,17 @@ namespace FRAR
 
 		public void OnFocusEnter(FocusEventData eventData)
 		{
-			if (outline != null)
-			{
-				outline.enabled = true;
-				float outlineWidth = outline.OutlineWidth;
-				highLightTween = DOTween.To(() => outlineWidth, x => outlineWidth = x, 6, 1).SetLoops(-1, LoopType.Yoyo).OnUpdate(() => outline.OutlineWidth = outlineWidth).Play();
-			}
+			//if (outline != null)
+			//{
+			//	outline.enabled = true;
+			//	float outlineWidth = outline.OutlineWidth;
+			//	highLightTween = DOTween.To(() => outlineWidth, x => outlineWidth = x, 6, 1).SetLoops(-1, LoopType.Yoyo).OnUpdate(() => outline.OutlineWidth = outlineWidth).Play();
+			//}
 		}
 
 		public void OnFocusExit(FocusEventData eventData)
 		{
-			DisableOutline();
+			//DisableOutline();
 
 			if (currentPointer != null && eventData.Pointer == currentPointer)
 			{
@@ -283,12 +283,12 @@ namespace FRAR
 		public void OnPointerDragged(MixedRealityPointerEventData eventData) 
 		{
 			//currentGrabPoint = (currentPointer.Rotation * grabPointInPointer) + currentPointer.Position;
-			DisableOutline();
+			//DisableOutline();
 		}
 
 		public void OnPointerUp(MixedRealityPointerEventData eventData)
 		{
-			DisableOutline();
+			//DisableOutline();
 			OnRotateStop?.Invoke();
 			if (currentPointer != null && eventData.Pointer == currentPointer)
 			{

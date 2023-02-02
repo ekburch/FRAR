@@ -11,7 +11,7 @@ using UnityEngine.Events;
 
 namespace FRAR.Utils
 {
-	public abstract class HandRailsBase : MonoBehaviour, IMixedRealityFocusHandler
+	public abstract class HandRailsBase : MonoBehaviour, IMixedRealityFocusHandler, IMixedRealityPointerHandler
     {
 		[Header("General Settings")]
 		[SerializeField]
@@ -238,5 +238,9 @@ namespace FRAR.Utils
 
 		public abstract void OnFocusEnter(FocusEventData eventData);
 		public abstract void OnFocusExit(FocusEventData eventData);
+		public abstract void OnPointerDown(MixedRealityPointerEventData eventData);
+		public abstract void OnPointerDragged(MixedRealityPointerEventData eventData);
+		public abstract void OnPointerUp(MixedRealityPointerEventData eventData);
+		public abstract void OnPointerClicked(MixedRealityPointerEventData eventData);
 	}
 }

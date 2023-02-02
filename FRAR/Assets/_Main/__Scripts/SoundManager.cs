@@ -1,12 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace FRAR
 {
-    [RequireComponent(typeof(AudioSource))]
+	[RequireComponent(typeof(AudioSource))]
     public class SoundManager : MonoBehaviour
     {
         public static SoundManager Instance = null;
@@ -32,6 +30,9 @@ namespace FRAR
 
         [SerializeField] bool m_isLooping;
         public bool IsLooping { get => m_isLooping; private set => m_isLooping = value; }
+
+        [SerializeField] bool m_shouldBePlaying;
+        public bool ShouldBePlaying { get => m_shouldBePlaying; private set => m_shouldBePlaying = value; }
 
         bool isCurrentSource = true;
 
@@ -79,7 +80,7 @@ namespace FRAR
                 InitAudioSources();
             if (!IsPlaying)
             {
-                if (!IsLooping)
+                if (!IsLooping && ShouldBePlaying)
                 {
                     m_currentTrackIndex = m_currentTrackIndex < m_inGameMusic.Length - 1 ? m_currentTrackIndex + 1 : 0;
                     AudioClip newClip = m_inGameMusic[m_currentTrackIndex];
@@ -190,21 +191,24 @@ namespace FRAR
             AudioClip clip = null;
 			switch (track)
 			{
+                case 0:
+                    IsLooping = false;
+                    ShouldBePlaying = false;
+                    break;
 			    case 1:
 					IsLooping = true;
-					clip = m_mainMenuMusic;
+                    ShouldBePlaying = true;
+                    clip = m_mainMenuMusic;
 					break;
 				case 2:
 					IsLooping = true;
-					clip = m_quizMenuMusic;
+                    ShouldBePlaying = true;
+                    clip = m_quizMenuMusic;
 					break;
 				case 3:
 					IsLooping = false;
-					clip = m_inGameMusic[m_currentTrackIndex];
-					break;
-				default:
-                    IsLooping = false;
-                    clip = null;
+                    ShouldBePlaying = true;
+                    clip = m_inGameMusic[m_currentTrackIndex];
 					break;
 				}
 			CrossFadeAudio(clip, 1f, 0.25f, 0f);

@@ -20,7 +20,27 @@ namespace FRAR
 
         }
 
-        protected override void OnLocationUpdated()
+		public override void OnPointerClicked(MixedRealityPointerEventData eventData)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public override void OnPointerDown(MixedRealityPointerEventData eventData)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public override void OnPointerDragged(MixedRealityPointerEventData eventData)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public override void OnPointerUp(MixedRealityPointerEventData eventData)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		protected override void OnLocationUpdated()
         {
             m_objOnRails.transform.position = PointOnLine;
         }

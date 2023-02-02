@@ -44,7 +44,7 @@ namespace FRAR
 				animator.Play(animationName, animationLayer);
 			}
 			animator.SetFloat(MotionTime, traveledFraction);
-			DisableOutline();
+			//DisableOutline();
 		}
 
 		private void OnTriggerEnter(Collider other)
@@ -54,13 +54,13 @@ namespace FRAR
 			else
 			{
 				IsTrackingPose = true;
-				if (_grabOutline != null)
-				{
-					_grabOutline.enabled = true;
-					float outlineWidth = _grabOutline.OutlineWidth;
-					highLightTween = DOTween.To(() => outlineWidth, x => outlineWidth = x, 6, 1).SetLoops(-1, LoopType.Yoyo).OnUpdate(() => _grabOutline.OutlineWidth = outlineWidth).Play();
+				//if (_grabOutline != null)
+				//{
+				//	_grabOutline.enabled = true;
+				//	float outlineWidth = _grabOutline.OutlineWidth;
+				//	highLightTween = DOTween.To(() => outlineWidth, x => outlineWidth = x, 6, 1).SetLoops(-1, LoopType.Yoyo).OnUpdate(() => _grabOutline.OutlineWidth = outlineWidth).Play();
 					HandAnimatorManager.instance?.ActivateAnimatorByName(animator.name.ToString(), true);
-				}
+				//}
 			}
 		}
 
@@ -71,10 +71,10 @@ namespace FRAR
 			else
 			{
 				IsTrackingPose = false;
-				if (_grabOutline != null)
-				{
-					DisableOutline();
-				}
+				//if (_grabOutline != null)
+				//{
+				//	DisableOutline();
+				//}
 				HandAnimatorManager.instance?.ActivateAnimatorByName(animator.name.ToString(), false);
 			}
 		}
@@ -87,10 +87,10 @@ namespace FRAR
 		public override void OnFocusExit(FocusEventData eventData)
 		{
 			//if (outline != null) outline.enabled = false;
-			if (currentPointer != null && eventData.Pointer == currentPointer)
-			{
-				currentPointer = null;
-			}
+			//if (currentPointer != null && eventData.Pointer == currentPointer)
+			//{
+			//	currentPointer = null;
+			//}
 		}
 
 		void DisableOutline()
@@ -103,6 +103,42 @@ namespace FRAR
 				highLightTween.Pause();
 				highLightTween.Rewind();
 			}
+		}
+
+		public override void OnPointerDown(MixedRealityPointerEventData eventData)
+		{
+			if (currentPointer == null && !eventData.used)
+			{
+				currentPointer = eventData.Pointer;
+				IsTrackingPose = true;
+				HandAnimatorManager.instance?.ActivateAnimatorByName(animator.name.ToString(), true);
+				eventData.Use();
+			}
+			if (currentPointer != null)
+			{
+				eventData.Use();
+			}
+		}
+
+		public override void OnPointerDragged(MixedRealityPointerEventData eventData)
+		{
+
+		}
+
+		public override void OnPointerUp(MixedRealityPointerEventData eventData)
+		{
+			if (currentPointer != null && eventData.Pointer == currentPointer)
+			{
+				IsTrackingPose = false;
+				HandAnimatorManager.instance?.ActivateAnimatorByName(animator.name.ToString(), false);
+				eventData.Use();
+			}
+			currentPointer = null;
+		}
+
+		public override void OnPointerClicked(MixedRealityPointerEventData eventData)
+		{
+
 		}
 	}
 }
