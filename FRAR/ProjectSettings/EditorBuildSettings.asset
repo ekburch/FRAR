@@ -35,5 +35,6 @@ EditorBuildSettings:
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: a3e312e11ae688d459c79d468ee9f552, type: 2}
     WebXR.Settings: {fileID: 11400000, guid: 054656c09d444914fa52f7da1ec87750, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: ed7fd7b77bd21fe4c85518543e6e9828, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8a816c03f3181e243bc768a389b68633, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 811ec7a3832c1eb4aa7ab54b53c007e0, type: 2}

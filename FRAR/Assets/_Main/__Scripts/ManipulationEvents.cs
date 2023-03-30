@@ -95,6 +95,9 @@ namespace FRAR
 			set => onRotateStop = value;
 		}
 
+		[SerializeField] private UnityEvent m_rotationEvent = new UnityEvent();
+		public UnityEvent OnRotationEvent { get => m_rotationEvent; set => m_rotationEvent = value; }
+
 		[Header("Debug")]
 		public bool isGrabbed = false;
 		[Tooltip("Temporary - remove when the Statemachine is in place.")]
@@ -165,6 +168,7 @@ namespace FRAR
 			{
 				var amountToMoveNeedle = isClockwise ? 2 : 1;
 				needleController?.HandleUserInput(amountToMoveNeedle);
+				OnRotationEvent?.Invoke();
 			}
 
 			//AudioClip clip = isClockwise ? m_audioClip1 : m_audioClip2;
@@ -241,12 +245,12 @@ namespace FRAR
 
 		public void OnFocusEnter(FocusEventData eventData)
 		{
-			//if (outline != null)
-			//{
-			//	outline.enabled = true;
-			//	float outlineWidth = outline.OutlineWidth;
-			//	highLightTween = DOTween.To(() => outlineWidth, x => outlineWidth = x, 6, 1).SetLoops(-1, LoopType.Yoyo).OnUpdate(() => outline.OutlineWidth = outlineWidth).Play();
-			//}
+			if (outline != null)
+			{
+				outline.enabled = true;
+				float outlineWidth = outline.OutlineWidth;
+				highLightTween = DOTween.To(() => outlineWidth, x => outlineWidth = x, 6, 1).SetLoops(-1, LoopType.Yoyo).OnUpdate(() => outline.OutlineWidth = outlineWidth).Play();
+			}
 		}
 
 		public void OnFocusExit(FocusEventData eventData)

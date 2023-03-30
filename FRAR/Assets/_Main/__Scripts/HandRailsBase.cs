@@ -96,6 +96,20 @@ namespace FRAR.Utils
 			set => onGrabEnd = value;
 		}
 
+		[SerializeField] UnityEvent onPull = new UnityEvent();
+		public UnityEvent OnPull
+		{
+			get => onPull;
+			set => onPull = value;
+		}
+
+		[SerializeField] UnityEvent onPush = new UnityEvent();
+		public UnityEvent OnPush
+		{
+			get => onPush;
+			set => onPush = value;
+		}
+
 		private AudioSource audioSource { get; set; }
 		[SerializeField] AudioClip pullSFX, pushSFX;
 
@@ -145,7 +159,8 @@ namespace FRAR.Utils
 							{
 								CurrentIndex++;
 								PointOnLine = jointPosition.GetClosestPointOnLineSegment(WayPointLocations, CurrentIndex);
-								audioSource.PlayOneShot(pullSFX);
+								//audioSource.PlayOneShot(pullSFX);
+								OnPull?.Invoke();
 							}
 						}
 						// If not, can we jump a segment backwards?
@@ -156,7 +171,8 @@ namespace FRAR.Utils
 							{
 								CurrentIndex--;
 								PointOnLine = jointPosition.GetClosestPointOnLineSegment(WayPointLocations, CurrentIndex);
-								audioSource.PlayOneShot(pushSFX);
+								OnPush?.Invoke();
+								//audioSource.PlayOneShot(pushSFX);
 							}
 						}
 					}

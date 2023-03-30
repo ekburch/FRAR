@@ -30,7 +30,7 @@ namespace FRAR
 
 		protected override void Awake()
 		{
-			//_grabOutline = GetComponentInChildren<Outline>();
+			_grabOutline = GetComponentInChildren<Outline>();
 			_grabOutline.enabled = false;
 		}
 
@@ -44,7 +44,7 @@ namespace FRAR
 				animator.Play(animationName, animationLayer);
 			}
 			animator.SetFloat(MotionTime, traveledFraction);
-			//DisableOutline();
+			DisableOutline();
 		}
 
 		private void OnTriggerEnter(Collider other)
@@ -54,13 +54,13 @@ namespace FRAR
 			else
 			{
 				IsTrackingPose = true;
-				//if (_grabOutline != null)
-				//{
-				//	_grabOutline.enabled = true;
-				//	float outlineWidth = _grabOutline.OutlineWidth;
-				//	highLightTween = DOTween.To(() => outlineWidth, x => outlineWidth = x, 6, 1).SetLoops(-1, LoopType.Yoyo).OnUpdate(() => _grabOutline.OutlineWidth = outlineWidth).Play();
+				if (_grabOutline != null)
+				{
+					_grabOutline.enabled = true;
+					float outlineWidth = _grabOutline.OutlineWidth;
+					highLightTween = DOTween.To(() => outlineWidth, x => outlineWidth = x, 6, 1).SetLoops(-1, LoopType.Yoyo).OnUpdate(() => _grabOutline.OutlineWidth = outlineWidth).Play();
 					HandAnimatorManager.instance?.ActivateAnimatorByName(animator.name.ToString(), true);
-				//}
+				}
 			}
 		}
 
@@ -71,10 +71,10 @@ namespace FRAR
 			else
 			{
 				IsTrackingPose = false;
-				//if (_grabOutline != null)
-				//{
-				//	DisableOutline();
-				//}
+				if (_grabOutline != null)
+				{
+					DisableOutline();
+				}
 				HandAnimatorManager.instance?.ActivateAnimatorByName(animator.name.ToString(), false);
 			}
 		}
