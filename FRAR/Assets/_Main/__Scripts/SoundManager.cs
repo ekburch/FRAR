@@ -78,9 +78,9 @@ namespace FRAR
         {
             if (m_audioSource1 == null || m_audioSource0 == null)
                 InitAudioSources();
-            if (!IsPlaying)
+            if (!IsLooping && m_audioSource0.isPlaying != true || m_audioSource1.isPlaying != true)
             {
-                if (!IsLooping && ShouldBePlaying)
+                if (ShouldBePlaying)
                 {
                     m_currentTrackIndex = m_currentTrackIndex < m_inGameMusic.Length - 1 ? m_currentTrackIndex + 1 : 0;
                     AudioClip newClip = m_inGameMusic[m_currentTrackIndex];
